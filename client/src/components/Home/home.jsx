@@ -1,21 +1,14 @@
 import React, {useState, useEffect} from 'react'
 
+import Header from '../Header/header'
+import Footer from '../Footer/footer'
+
 const Home = () => {
 
     return (
        <div>
-        <p>
-            Paragraph
-        </p>
-        <span>
-            Home
-        </span>
-        <span>
-            Body
-        </span>
-        <span>
-            Footer
-        </span>
+         <Header/>
+         <Footer/>
        </div>
     )
 }
