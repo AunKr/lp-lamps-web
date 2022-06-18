@@ -4,7 +4,7 @@ import LogoImage from '../../assets/images/logo.png'
 
 const Header = () => {
     return (
-        <div className='header-area header-sticky wow slideInDown' data-wow-duration="0.75s" data-wow-delay="0s">
+        <div className='header-area header-sticky animate__animated animate__bounceInDown' data-wow-duration="0.75s" data-wow-delay="0s">
             <div className="container">
                 <div className="row">
                     <div className="col-12">
