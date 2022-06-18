@@ -20,13 +20,13 @@ const Home = () => {
     <div>
       <Header />
       {/* ***** main-banner Start ***** */}
-      <div className="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+      <div className="main-banner " id="top" data-wow-duration="1s" data-wow-delay="0.5s">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="row">
                 <div className="col-lg-6 align-self-center">
-                  <div className="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                  <div className="left-content header-text animate__animated animate__backInLeft" data-wow-duration="1s" data-wow-delay="1s">
                     <h6>Welcome to LUXPAL LAMPS</h6>
                     <h2>We Make <em>Digital Ideas</em> &amp; <span>SEO</span> Marketing</h2>
                     <p>LUXPAL LAMPS is a professional looking HTML template using a Bootstrap 5 (beta 2). This CSS template is free for you provided by <a rel="nofollow" href="https://templatemo.com/page/1" target="_parent">TemplateMo</a>.</p>
@@ -41,7 +41,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="col-lg-6">
-                  <div className="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                  <div className="right-image animate__animated animate__backInRight" data-wow-duration="1s" data-wow-delay="0.5s">
                     <img src={bannerRight} alt="team meeting" />
                   </div>
                 </div>
