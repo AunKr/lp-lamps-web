@@ -16,10 +16,9 @@ const Header = () => {
                             <ul className="nav">
                                 <li className="scroll-to-section"><a href="#top" className="active">Home</a></li>
                                 <li className="scroll-to-section"><a href="#about" className="">About Us</a></li>
-                                <li className="scroll-to-section"><a href="#portfolio">Products</a></li>
+                                <li className="scroll-to-section hoverNav"><a href="#portfolio">Products</a></li>
                                 <li className="scroll-to-section"><a href="#blog">Blog</a></li>
-                                <li className="scroll-to-section"><a href="#contact">Message Us</a></li>
-                                <li className="scroll-to-section"><div className="main-red-button"><a href="#contact">Contact Now</a></div></li>
+                                <li className="scroll-to-section"><div className="main-red-button"><a href="#contact">Contact Us</a></div></li>
                             </ul>
                             <a className="menu-trigger">
                                 <span>Menu</span>
