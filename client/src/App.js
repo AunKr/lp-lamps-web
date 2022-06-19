@@ -4,6 +4,7 @@ import Home from './components/Home/home'
 import Products from './components/Products/products'
 import EditProducts from './components/Products/editProducts'
 import Dashboard from './components/Dashboard/dashboard'
+import Blog from './components/Blog/blog'
 
 const App = () => {
 
@@ -13,6 +14,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/products' element={<Products/>} />
+        <Route path='/blog' element={<Blog/>} />
         {session ? (
           <>
           <Route path='/admin/dashboard' element={<Dashboard/>} />

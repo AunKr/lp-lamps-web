@@ -44,7 +44,22 @@ ul, li {
     margin-top: 0px;
     margin-bottom: 0px;
   }
-
+::-webkit-scrollbar-track
+  {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+  }
+  
+::-webkit-scrollbar
+  {
+    width: 6px;
+    background-color: #F5F5F5;
+  }
+  
+::-webkit-scrollbar-thumb
+  {
+    background-color: #fe3f40;
+  }
   
 /* 
 ---------------------------------------------
@@ -118,6 +133,10 @@ body {
   border-radius: 23px;
   letter-spacing: 0.25px;
 }
+.main-blue-button a:hover {
+  background-color: #fe3f40;
+  color: #fff;
+}
 
 .main-red-button a {
   display: inline-block;
@@ -130,6 +149,7 @@ body {
   border-radius: 23px;
   letter-spacing: 0.25px;
 }
+
 
 .main-white-button a {
   display: inline-block;
@@ -477,6 +497,23 @@ Portfolio
 
 .our-portfolio .showed-content img {
   max-width: 100px;
+}
+.our-portfolio.section a.readMore{
+  display: inline-block;
+    background-color: #03a4ed;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 12px 25px;
+    border-radius: 23px;
+    letter-spacing: 0.25px;    
+    margin: 30px auto;
+    width: auto;
+}
+.our-portfolio.section a.readMore:hover{
+  background-color: #fe3f40;
+    color: #fff;
 }
 
 /* 

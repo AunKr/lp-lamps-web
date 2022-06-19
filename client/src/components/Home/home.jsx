@@ -174,6 +174,7 @@ const Home = () => {
                 </div>
               </a>
             </div>
+            <a className='readMore' href='/products'>Read More</a>
           </div>
         </div>
       </div>
