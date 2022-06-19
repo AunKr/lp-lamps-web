@@ -21,7 +21,6 @@ class Products extends ModelBase {
   }
 
   async getInvoiceById(data) {
-    console.log("sdfsdfsdfsdfsfsdfsdf");
     return await db[this._modelName].findOne({
       attributes: [
         "ID",

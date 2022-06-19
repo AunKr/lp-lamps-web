@@ -6,6 +6,7 @@ const http = require('http')
 const fs = require('fs')
 
 const productRoutes = require('./routes/product.routes')
+const userRoute = require('./routes/auth.routes')
 
 const app = express();
 const server = http.createServer(app);
@@ -20,6 +21,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
 
 // load all routes
+app.use('/auth', userRoute)
 app.use('/product', productRoutes)
 
 app.use(function (req, res, next) {
@@ -27,6 +29,7 @@ app.use(function (req, res, next) {
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
   next();
 });
+
 process.on("unhandledRejection", (error) => {
   console.log("UNHANDLED_REJECTION", error);
 });

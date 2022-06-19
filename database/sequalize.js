@@ -4,8 +4,6 @@ const fs = require("fs");
 
 const dbConfig = require("./dbConfig");
 
-console.log("dbConfig", dbConfig);
-
 const modelPath = path.normalize(path.join(__dirname, "/.."));
 const db = {};
 const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
@@ -32,15 +30,11 @@ sequelize
 
 // loop through all files in models directory
 fs.readdirSync(path.join(modelPath, "models")).forEach(function (file) {
-  console.log("path.join", path.join(modelPath, "models", file));
   const model = require(path.join(modelPath, "models", file))(sequelize, DataTypes);
-  console.log("model", model);
   db[model.name] = model;
-  console.log(" db[model.name]", model.name, db[model.name]);
 });
 
 Object.keys(db).forEach(function (modelName) {
-    console.log("modelName", modelName);
   if (db[modelName]?.options?.hasOwnProperty("associate")) {
     db[modelName]?.options?.associate(db);
   }

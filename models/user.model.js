@@ -1,24 +1,24 @@
 module.exports = (sequelize, DataTypes) => {
-    const Product = sequelize.define("Product", {
+    const User = sequelize.define("User", {
         id: {
             type: DataTypes.UUID,
             defaultValue: DataTypes.UUIDV4,
             primaryKey: true
         },
-        image: {
+        email: {
             type: DataTypes.STRING
         },
-        title: {
+        password: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        description: {
-            type: DataTypes.TEXT
+        phone: {
+            type: DataTypes.STRING
         },
-        category: {
+        name: {
             type: DataTypes.STRING
         }
     
     })
-    return Product
+    return User
 }

@@ -3,7 +3,6 @@ const Product = require('../database/operations/product.js')
 exports.productCreate = async (req, res) => {
     try {
         const response =await Product.create(req.body)
-        console.log(response);
         if(response){
             res.send(response).status(200)
         }else {
@@ -17,7 +16,6 @@ exports.productCreate = async (req, res) => {
 exports.getAllProduct = async (req,res) => {
     try {
         const response = await Product.getAll()
-        console.log(response);
         if(response){
             res.send(response).status(200)
         }else {
@@ -31,9 +29,7 @@ exports.getAllProduct = async (req,res) => {
 exports.productUpdate = async (req,res) => {
     try {
         const id = req.params.id
-        console.log("req.body", req.body);
         const response = await Product.update(req.body, {id: id})
-        console.log(response);
         if(response){
             res.send(response).status(200)
         }else {
@@ -48,7 +44,6 @@ exports.productDelete = async (req,res) => {
     try {
         const id = req.params.id
         const response = await Product.deleteEntry(id)
-        console.log(response);
         if(response){
             res.send({data: response}).status(200)
         }else {

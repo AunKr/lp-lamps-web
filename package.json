@@ -17,11 +17,14 @@
   },
   "homepage": "https://github.com/AunKr/lp-lamps-web#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
     "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.3.3",
     "node-fetch": "^2.6.1",
-    "sequelize": "^6.21.0"
+    "sequelize": "^6.21.0",
+    "uuid": "^8.3.2"
   }
 }
