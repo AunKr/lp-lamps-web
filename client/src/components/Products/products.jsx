@@ -18,7 +18,7 @@ const Products = () => {
       <Header />
       <div className='container'>
         <div className='row'>
-          <h1 className='topTitle'>Are Products</h1>
+          <h1 className='topTitle'>Our Products</h1>
           <p className='text-center mb-10'>Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter</p>
 
           <div className='col-lg-2 productsCategories'>

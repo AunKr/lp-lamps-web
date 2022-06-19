@@ -5,6 +5,8 @@ import Products from './components/Products/products'
 import EditProducts from './components/Products/editProducts'
 import Dashboard from './components/Dashboard/dashboard'
 import Blog from './components/Blog/blog'
+import Login from './components/Login/login'
+import Register from './components/Login/register'
 
 const App = () => {
 
@@ -15,6 +17,7 @@ const App = () => {
         <Route path='/' element={<Home/>} />
         <Route path='/products' element={<Products/>} />
         <Route path='/blog' element={<Blog/>} />
+        <Route path='/admin/register' element={<Register/>} />
         {session ? (
           <>
           <Route path='/admin/dashboard' element={<Dashboard/>} />
@@ -22,7 +25,7 @@ const App = () => {
           <Route path='/admin/edit/blog' element={<EditProducts/>} />
           </>
         ): (
-          <Route path='/admin/login' element={<Products/>} />
+          <Route path='/admin/login' element={<Login/>} />
         )}
       </Routes>
     </Router>
