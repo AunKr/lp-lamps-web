@@ -15,9 +15,10 @@ const Register = () => {
                     <div className='col-4'>
                         <form className='loginFrom'>
                             <h3>Account Register</h3>
-                            <input type="text" placeholder="Email Address"></input>
-                            <input type="text" placeholder="username"></input>
+                            <input type="text" placeholder="Enter Email"></input>
+                            <input type="text" placeholder="Enter Name"></input>
                             <input type="password" placeholder="Password"></input>
+                            <input type="text" placeholder="Phone"></input>
                             <button type='button'> Submit</button>
                             <div className="sign-in-account"><span>Don't have an account?</span><a href='/admin/login'>Sign In</a></div>
                         </form>
