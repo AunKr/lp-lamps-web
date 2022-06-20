@@ -20,12 +20,13 @@ const App = () => {
         <Route path='/admin/register' element={<Register/>} />
         {session ? (
           <>
-          <Route path='/admin/dashboard' element={<Dashboard/>} />
+         
           <Route path='/admin/edit/product' element={<EditProducts/>}/>
           <Route path='/admin/edit/blog' element={<EditProducts/>} />
           </>
         ): (
-          <Route path='/admin/login' element={<Login/>} />
+          //<Route path='/admin/login' element={<Login/>} />
+          <Route path='/admin/dashboard' element={<Dashboard/>} />
         )}
       </Routes>
     </Router>

@@ -1,0 +1,109 @@
+.dashboard{
+    width: 100%;
+    float: left;    
+    background: black;
+}
+.content {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    min-height: 100vh;
+    background: #000000;
+    transition: 0.5s;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    height: 100vh;
+    overflow-y: auto;
+    background: #191c24;
+    transition: 0.5s;
+    z-index: 999;
+}
+.sidebar a{
+    padding: 13px 20px;
+    font-weight: 500;
+    border-left: 3px solid;
+    border-radius: 0 30px 30px 0;
+    outline: none;
+    color: #eb1616;
+    background: #000000;
+    border-color: #eb1616;
+}
+.sidebar a:hover{
+    color: #eb1616;
+}
+.sidebar h3 {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-size: 16px;
+    padding: 15px;
+}
+.sidebar h3 span{
+    font-size: 12px;    
+    margin-top: 4px;
+}
+.top-bg {
+    background-color: #191C24;
+}
+.top-bg h1 {
+    color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 23px;
+}
+.cardItem{    
+    margin-top: 20px;
+    background-color: #191c24;
+    float: left;
+    width: 100%;
+    padding: 30px 13px;
+    border-radius: 5px;    
+    display: flex;
+    position: relative;
+}
+.cardItem img {
+    width: 40px;
+}
+.cardItem p{
+    color: #6C7293;
+}
+.cardItem h6{
+    color: #fff;
+}
+.cardItem img.addButton{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+}
+.productsTable {
+    margin-top: 20px;
+    float: left;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 5px ;
+    background-color: #191C24;
+}
+.productsTable h6 {
+    color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 23px;
+}
+.productsTable table{
+    background-color: #000000;
+    color: #fff;
+ }
+ .productsTable table th ,.productsTable table td{
+    padding: 0.5rem 0.5rem;
+ }
+ .productsTable table th{
+    border-bottom-width: 1px;
+ }
+ .productsTable table td img{
+    width: 20px;
+ }
