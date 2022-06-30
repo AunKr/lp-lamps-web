@@ -83,7 +83,6 @@ exports.responseError = function (res, error) {
 
 exports.responseSuccess = function (res, data, status) {
     let response = createSuccessResponse(data, res.updateToken);
-    applyRequestDuration(res, response);
     return res.status(status || STATUS.SUCCESS).send(response);
 };
 

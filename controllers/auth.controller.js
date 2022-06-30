@@ -2,6 +2,7 @@ const bcrypt = require('bcrypt')
 
 const User = require("../database/operations/user.js");
 const tokenService = require('../shared/jwt.token.service.js')
+const service = require('../shared/service.response.js')
 
 exports.register = async (req, res) => {
   try {
@@ -44,26 +45,22 @@ exports.login = async (req, res) => {
 		const passwordMatched = await bcrypt.compare(password, user.password);
 		if (passwordMatched) {
 			const token = tokenService.issueToken({email: email, password: user.password})
-			return res.json({
+            const result = {
 				message: 'LoggIn Successful!!',
 				type: 'success',
 				token: token,
 				expiresIn: 3600,
 				userData: user,
-			});
+			}
+            return service.responseSuccess(res, result);
 		} else {
-			return res.json({
-				message: 'Please enter correct password!!',
-				type: 'error',
-			});
+            return service.responseError(res, service.createError(service.ERROR.ERROR_AUTHORIZATION_FAIL, 'Invalid Credentials'));
 		}
 	} else {
-		return res.json({
-			message: 'Incorrect User Name!!',
-			type: 'error',
-		});
+        return service.responseError(res, service.createError(service.ERROR.ERROR_AUTHORIZATION_FAIL, 'Invalid Credentials'));
 	}
   } catch (error) {
-    res.send({ error: error }).status(500);
+    console.log("error", error);
+    return service.responseError(res, service.createError(service.ERROR.ERROR_BAD_REQUEST, "Something went wrong"));
   }
 };

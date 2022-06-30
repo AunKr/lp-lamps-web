@@ -1,36 +1,44 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom'
-import Home from './components/Home/home'
-import Products from './components/Products/products'
-import EditProducts from './components/Products/editProducts'
-import Dashboard from './components/Dashboard/dashboard'
-import Blog from './components/Blog/blog'
-import Login from './components/Login/login'
-import Register from './components/Login/register'
+import React, { useContext } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import Home from "./components/Home/home";
+import Products from "./components/Products/products";
+import Blog from "./components/Blog/blog";
+import Register from "./components/Login/register";
+import AuthContextProvider from "./components/AuthContextProvider/authContextProvider";
+import SecuredLayout from "./pages/SecuredLayouts/securedLayouts";
+import Login from "./components/Login/login";
 
 const App = () => {
 
-  const session = localStorage.getItem('session') ? JSON.parse(localStorage.getItem('session')) : null;
   return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/products' element={<Products/>} />
-        <Route path='/blog' element={<Blog/>} />
-        <Route path='/admin/register' element={<Register/>} />
-        {session ? (
-          <>
-         
-          <Route path='/admin/edit/product' element={<EditProducts/>}/>
-          <Route path='/admin/edit/blog' element={<EditProducts/>} />
-          </>
-        ): (
-          //<Route path='/admin/login' element={<Login/>} />
-          <Route path='/admin/dashboard' element={<Dashboard/>} />
-        )}
-      </Routes>
-    </Router>
-  )
-}
+    <AuthContextProvider>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/admin/register" element={<Register />} />
+          <Route path="/admin/*" element={<SecuredLayout />} />
+          {/* <Route path="/admin/login" element={<Login />} /> */}
+        </Routes>
+        <ToastContainer
+          position="top-right"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={true}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss={false}
+          draggable
+          pauseOnHover={false}
+        />
+      </Router>
+    </AuthContextProvider>
+  );
+};
 
-export default App
+export default App;
