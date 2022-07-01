@@ -6,9 +6,11 @@ class Products extends ModelBase {
     super();
     this.fields = {
       id: "id",
-      title: "title",
-      image: "image",
+      name: "name",
+      category: 'category',
+      subcategory: 'subcategory',
       description: "description",
+      image: "image",
     };
 
     // Set name of Model

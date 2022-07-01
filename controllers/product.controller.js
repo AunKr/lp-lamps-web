@@ -1,15 +1,25 @@
 const Product = require('../database/operations/product.js')
+const service = require('../shared/service.response.js')
 
 exports.productCreate = async (req, res) => {
     try {
-        const response =await Product.create(req.body)
+        console.log("req.body????????????", req.body);
+        let data = {
+            name: req.body.name,
+            category: req.body.category,
+            subcategory: req.body.subcategory,
+            description: req.body.description,
+            image: req.path
+        }
+        const response =await Product.create(data)
         if(response){
-            res.send(response).status(200)
+            return service.responseSuccess(res, response);
         }else {
-            res.send({error: 'Something went wrong'}).status(400)
+            return service.responseError(res, service.createError(service.ERROR.ERROR_DATABASE_EXEC, "Product not added"));
         }
     } catch (error) {
-        res.send({error: error}).status(500)
+        console.log("error======>>>>>",error);
+        return service.responseError(res, service.createError(service.ERROR.ERROR_BAD_REQUEST, "Something went wrong"));
     }
 };
 

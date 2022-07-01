@@ -5,19 +5,22 @@ module.exports = (sequelize, DataTypes) => {
             defaultValue: DataTypes.UUIDV4,
             primaryKey: true
         },
-        image: {
-            type: DataTypes.STRING
-        },
-        title: {
+        name: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        category: {
+            type: DataTypes.STRING
+        },
+        subcategory: {
+            type: DataTypes.STRING
         },
         description: {
             type: DataTypes.TEXT
         },
-        category: {
+        image: {
             type: DataTypes.STRING
-        }
+        },
     
     })
     return Product

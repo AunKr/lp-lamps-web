@@ -10,7 +10,6 @@ import Blog from "./components/Blog/blog";
 import Register from "./components/Login/register";
 import AuthContextProvider from "./components/AuthContextProvider/authContextProvider";
 import SecuredLayout from "./pages/SecuredLayouts/securedLayouts";
-import Login from "./components/Login/login";
 
 const App = () => {
 
@@ -23,7 +22,6 @@ const App = () => {
           <Route path="/blog" element={<Blog />} />
           <Route path="/admin/register" element={<Register />} />
           <Route path="/admin/*" element={<SecuredLayout />} />
-          {/* <Route path="/admin/login" element={<Login />} /> */}
         </Routes>
         <ToastContainer
           position="top-right"

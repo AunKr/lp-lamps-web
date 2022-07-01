@@ -7,7 +7,7 @@ import editing from '../../assets/images/editing.png'
 import deleteIcon from '../../assets/images/delete.png'
 import { AuthContext } from '../AuthContextProvider/authContextProvider'
 import {useNavigate } from 'react-router-dom'
-import ConfirmationModal from '../Modal/modal'
+import ConfirmationModal from '../Modal/productModal'
 
 const Dashboard = () => {
     const navigate = useNavigate();
@@ -31,7 +31,6 @@ const Dashboard = () => {
     }
 
     const openModal = () => {
-        console.log("jhsdfkjshdkfj");
         setShowModal(true)
     }
 
@@ -39,6 +38,7 @@ const Dashboard = () => {
         <div>
             {showModal && <ConfirmationModal
                 open={showModal}
+                title={'Add Product'}
                 handleClose={closeModal}
             />}
             <div className='dashboard'>

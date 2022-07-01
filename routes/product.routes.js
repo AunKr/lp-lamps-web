@@ -4,7 +4,7 @@ const { ensureAuthenticated } = require('../middleware/auth.middleware.js')
 
 const productRoute = express.Router();
 
-productRoute.post('/create', ensureAuthenticated , controller.productCreate);
+productRoute.post('/create' , controller.productCreate);
 productRoute.get('/get', ensureAuthenticated , controller.getAllProduct);
 productRoute.patch('/update/:id', ensureAuthenticated , controller.productUpdate);
 productRoute.delete('/delete/:id', ensureAuthenticated , controller.productDelete);
