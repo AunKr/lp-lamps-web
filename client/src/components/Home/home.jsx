@@ -206,7 +206,7 @@ const Home = () => {
                     <a href="#"><h4>SEO Agency &amp; Digital Marketing</h4></a>
                     <p>Lorem ipsum dolor sit amet, consectetur and sed doer ket eismod tempor incididunt ut labore et dolore magna...</p>
                     <div class="main-blue-button">
-                      <a href="#">Discover More</a>
+                      <a href="/blog">Read More</a>
                     </div>
                   </div>
                 </div>

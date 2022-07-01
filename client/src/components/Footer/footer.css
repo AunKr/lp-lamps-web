@@ -1,0 +1,21 @@
+ul.social-media-icons {
+    width: 100%;
+    display: flex;
+    justify-content: center
+}
+ul.social-media-icons li a {
+    width: 40px;
+    float: left;
+    height: 40px;
+    background: red;
+    /* float: left; */
+    margin-right: 5px;
+    border-radius: 100%;
+    line-height: 40px;
+    text-align: center;
+}
+ul.social-media-icons li a svg {
+    width: 25px;
+    height: 25px;
+    fill: #fff;
+}
