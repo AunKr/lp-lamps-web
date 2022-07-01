@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'react'
-import './footer.css'
 import React from 'react'
+import './footer.css'
 
 const Footer = () => {
 
