@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './dashboard.css'
 import Products from '../../assets/images/products.png'
 import blogger from '../../assets/images/blogger.png'
@@ -7,10 +7,12 @@ import editing from '../../assets/images/editing.png'
 import deleteIcon from '../../assets/images/delete.png'
 import { AuthContext } from '../AuthContextProvider/authContextProvider'
 import {useNavigate } from 'react-router-dom'
+import ConfirmationModal from '../Modal/modal'
 
 const Dashboard = () => {
     const navigate = useNavigate();
     const { isLoggedIn, setLoggedIn } = useContext(AuthContext)
+    const [showModal, setShowModal] = useState(false)
 
     useEffect(()=>{
         if (!isLoggedIn) {
@@ -23,8 +25,22 @@ const Dashboard = () => {
         setLoggedIn(false)
         navigate('/admin/login')
     } 
+
+    const closeModal = () => {
+        setShowModal(false)
+    }
+
+    const openModal = () => {
+        console.log("jhsdfkjshdkfj");
+        setShowModal(true)
+    }
+
     return (
         <div>
+            {showModal && <ConfirmationModal
+                open={showModal}
+                handleClose={closeModal}
+            />}
             <div className='dashboard'>
                 <div className='sidebar '>
                     <h3>Bharat Gupta <span>Admin</span></h3>
@@ -45,7 +61,9 @@ const Dashboard = () => {
                                         <p class="mb-2">Today Products</p>
                                         <h6 class="mb-0">$1234</h6>
                                     </div>
-                                    <img className='addButton' src={plus} alt="" />
+                                    <div  onClick={openModal}>
+                                        <img className='addButton' src={plus} alt="" />
+                                    </div>
                                 </div>
                             </div>
                             <div className='col-sm-6 col-xl-6'>
@@ -55,7 +73,9 @@ const Dashboard = () => {
                                         <p class="mb-2">Today Blog</p>
                                         <h6 class="mb-0">$1234</h6>
                                     </div>
-                                    <img className='addButton' src={plus} alt="" />
+                                    <div  onClick={openModal}>
+                                        <img className='addButton' src={plus} alt=""/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
