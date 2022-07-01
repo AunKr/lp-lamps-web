@@ -54,3 +54,7 @@
     color: #fe3f40;
     margin-left: 5px;
 }
+
+.error {
+    color: red;
+}

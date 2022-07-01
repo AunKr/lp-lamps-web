@@ -1,13 +1,28 @@
-import React, { useState, useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import './dashboard.css'
 import Products from '../../assets/images/products.png'
 import blogger from '../../assets/images/blogger.png'
 import plus from '../../assets/images/plus.png'
 import editing from '../../assets/images/editing.png'
 import deleteIcon from '../../assets/images/delete.png'
+import { AuthContext } from '../AuthContextProvider/authContextProvider'
+import {useNavigate } from 'react-router-dom'
 
 const Dashboard = () => {
+    const navigate = useNavigate();
+    const { isLoggedIn, setLoggedIn } = useContext(AuthContext)
 
+    useEffect(()=>{
+        if (!isLoggedIn) {
+            navigate('/admin/login')
+        }   
+    })
+
+    const logout = () =>{
+        localStorage.removeItem('userData')
+        setLoggedIn(false)
+        navigate('/admin/login')
+    } 
     return (
         <div>
             <div className='dashboard'>
@@ -20,7 +35,7 @@ const Dashboard = () => {
                     <div className='container-fluid '>
                         <div className='top-bg'>
                             <h1>Dashboard</h1>
-                            <a className='text-right' href='#'>Login</a>
+                            <a className='text-right' onClick={logout}>Logout</a>
                         </div>
                         <div className='row'>
                             <div className='col-sm-6 col-xl-6'>
@@ -44,7 +59,7 @@ const Dashboard = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="productsTable">
+                        <div className="productsTable">
                             <h6 class="mb-4">Products Table</h6>
                             <table class="table table-dark">
                                 <thead>
@@ -81,7 +96,7 @@ const Dashboard = () => {
                                 </tbody>
                             </table>
                         </div>
-                        <div class="productsTable">
+                        <div className="productsTable">
                             <h6 class="mb-4">Blog Table</h6>
                             <table class="table table-dark">
                                 <thead>

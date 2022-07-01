@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import './login.css'
 import loginBg from '../../assets/images/login-bg.jpg'
 const Register = () => {

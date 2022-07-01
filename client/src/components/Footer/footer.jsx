@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import './footer.css'
+import React from 'react'
 
 const Footer = () => {
 
