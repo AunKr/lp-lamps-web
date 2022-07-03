@@ -1,7 +1,7 @@
 import { Formik } from "formik";
 import React, { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
-import {addProduct} from '../Products/product.service'
+import axios from "axios";
 
 const ProductModal = (props) => {
     const [imageSrc, setImageSrc] = useState(null);
@@ -13,7 +13,12 @@ const ProductModal = (props) => {
       </Modal.Header>
       <Modal.Body>
       <Formik
-      initialValues={{ file: null }}
+      initialValues={{ name:'',
+      file: null,
+      category:'', 
+      subcategory:'', 
+      description:'' 
+    }}
       validate={(values) => {
         const errors = {};
         if (!values.file) {
@@ -21,20 +26,15 @@ const ProductModal = (props) => {
         }
         return errors;
       }}
-      onSubmit={(values) => {
-        console.log("values", values);
-        const data = {
-            name:  values.name,
-            category: values.category,
-            subcategory: values.subcategory,
-            description:  values.description,
-            path: values.file?.path
-        }
-        addProduct(data)
-        .then((res)=>{
-            console.log("res",res);
-        })
-        .catch(err => console.log(err))
+      onSubmit={async(values) => {
+        let formData = new FormData();
+        formData.append('name', values.name)
+        formData.append('category', values.category)
+        formData.append('subcategory', values.subcategory)
+        formData.append('description', values.description)
+        formData.append('image', values.file)
+        const res = await axios.post('http://localhost:4500/product/create',formData)
+        console.log("res", res);
       }}
     >
       {({
@@ -47,7 +47,7 @@ const ProductModal = (props) => {
         setFieldValue,
         /* and other goodies */
       }) => (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} method="POST" encType="multipart/form-data">
           <div>
             <label>Name</label>
             <input

@@ -10,7 +10,7 @@ const Footer = () => {
             <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s">
               <p>© Copyright 2022 Luxpal.com All Rights Reserved. 
               
-              <br/>Design: <a rel="nofollow" href="https://templatemo.com">Luxpal.com</a></p>
+              <br/>Design: <a rel="nofollow" href="">Luxpal.com</a></p>
               <ul className='social-media-icons'>
                 <li>
                   <a href='#'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a>

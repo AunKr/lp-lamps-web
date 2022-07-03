@@ -15,7 +15,7 @@ const server = http.createServer(app);
 let port = process.env.PORT || 4500
 
 app.set("port", port);
-app.use(bodyParser.json({ limit: '50mb' }))
+app.use(bodyParser.json({ limit: '900mb' }))
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }))
 app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());

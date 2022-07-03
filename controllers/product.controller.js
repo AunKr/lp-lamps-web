@@ -1,19 +1,52 @@
+const multer = require('multer')
+const path = require('path')
+
 const Product = require('../database/operations/product.js')
 const service = require('../shared/service.response.js')
 
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, path.join(__dirname,"../client/public/ProductImages"))
+    },
+    filename: (req, file, cb)=> {
+        cb(null,file.originalname)
+    }
+})
+
+exports.upload = multer({
+    storage:storage,
+    limits:{fileSize: '10000'},
+    fileFilter: (req, file, cb) => {
+        const fileTypes = /jpeg|jpg|png|gif/
+        const mimeType = fileTypes.test(file.mimetype)  
+        const extname = fileTypes.test(path.extname(file.originalname))
+
+        if(mimeType && extname) {
+            return cb(null, true)
+        }
+        cb('Give proper files formate to upload')
+    }
+}).single('image')
+
+
 exports.productCreate = async (req, res) => {
     try {
-        console.log("req.body????????????", req.body);
+        const filePath = req.file?.path.substr(45, 1000)
         let data = {
             name: req.body.name,
             category: req.body.category,
             subcategory: req.body.subcategory,
             description: req.body.description,
-            image: req.path
+            image: filePath
         }
         const response =await Product.create(data)
         if(response){
-            return service.responseSuccess(res, response);
+            const data = {
+                message: 'Product added successfully',
+				type: 'success',
+				productData: response,
+            }
+            return service.responseSuccess(res, data);
         }else {
             return service.responseError(res, service.createError(service.ERROR.ERROR_DATABASE_EXEC, "Product not added"));
         }
