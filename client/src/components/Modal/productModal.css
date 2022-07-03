@@ -15,22 +15,7 @@
     padding: 0px 20px;
     margin-bottom: 20px;
 }
-
-.products-page .modal-footer button.btn{
-    display: inline-block;
-    background-color: #03a4ed;
-    font-size: 15px;
-    font-weight: 400;
-    color: #fff;
-    text-transform: capitalize;
-    padding: 12px 25px;
-    border-radius: 23px;
-    letter-spacing: 0.25px;
-    border: none;
-    outline: none;
-    transition: all .3s;
-}
-.products-page .modal-footer button.btn.btn-secondary {
+.products-page  button.btn.btn-secondary {
     background-color: #fe3f40;
 }
 .products-page .modal-body {
@@ -55,8 +40,37 @@
     left: 0;
     height: 47px;
 }
+.custome-file{
+    display: flex;
+}
+.custome-file p{
+    margin-left: 8rem;
+    margin-top: 6px;
+    width: 100%;
+    padding: 10px 0 9px 8px;
+    background-color: #d1f3ff;
+    border-radius: 0 33px 33px 0;
+}
 .file-upload span{
     position: absolute;
+    display: inline-block;
+    background-color: #03a4ed;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 12px 25px;
+    border-radius: 3px;
+    letter-spacing: 0.25px;
+    border: none;
+    outline: none;
+    transition: all .3s;
+    top: 29px;
+    left: 0;
+}
+.products-page .modal-body button{ 
+    margin-top: 20px;
+    float:right;
     display: inline-block;
     background-color: #03a4ed;
     font-size: 15px;
@@ -69,6 +83,11 @@
     border: none;
     outline: none;
     transition: all .3s;
-    top: 29px;
-    left: 0;
+    margin-left:1rem;
+    margin-bottom: 20px;
+}
+.save-button {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
 }

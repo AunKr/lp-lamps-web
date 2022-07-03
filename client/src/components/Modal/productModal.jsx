@@ -147,26 +147,27 @@ const ProductModal = (props) => {
               onBlur={handleBlur}
               className="form-control"
             />
+            <div className="custome-file">
             <span>Choose File</span>
-            <p>{values?.file?.name}</p>
+            <p>{values?.file?.name ? values?.file?.name : "No file Upload"} </p>
+            </div>
             {errors.file && touched.file ? (
               <div className="error">{errors.file}</div>
             ) : null}
             <img src={imageSrc}></img>
           </div>
-          <button type="submit">Submit</button>
+         <div className="save-button">
+         <Button variant="secondary" onClick={props.handleClose}>
+          Close
+        </Button>
+        <Button type="submit" variant="primary" onClick={props.handleClose}>
+          Add
+        </Button>
+         </div>
         </form>
       )}
     </Formik>
       </Modal.Body>
-      <Modal.Footer>
-        <Button variant="secondary" onClick={props.handleClose}>
-          Close
-        </Button>
-        <Button variant="primary" onClick={props.handleClose}>
-          Save Changes
-        </Button>
-      </Modal.Footer>
     </Modal>
   );
 };
