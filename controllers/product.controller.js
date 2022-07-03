@@ -31,13 +31,15 @@ exports.upload = multer({
 
 exports.productCreate = async (req, res) => {
     try {
-        const filePath = req.file?.path.substr(45, 1000)
+        const filePath = req.file?.path.replace(/\\/g, ' ')
+        const filepathArray = filePath.split(' ')
+        const path = `${filepathArray[filepathArray.length-2]}\\${filepathArray[filepathArray.length-1]}`
         let data = {
             name: req.body.name,
             category: req.body.category,
             subcategory: req.body.subcategory,
             description: req.body.description,
-            image: filePath
+            image: path
         }
         const response =await Product.create(data)
         if(response){
