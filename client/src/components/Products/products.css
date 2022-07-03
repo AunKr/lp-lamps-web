@@ -48,7 +48,7 @@
     width: 70%;
 }
 
-.portfolio-info a{
+.portfolio-info a , .portfolio-info .add-icon{
     position: absolute;
     right: 50px;
     font-size: 24px;
@@ -56,7 +56,7 @@
     color: rgba(255, 255, 255, 0.7);
     transition: ease-in-out 0.3s;
 }
-.portfolio-info a svg{
+.portfolio-info a svg , .portfolio-info .add-icon svg{
     fill: #fff;
 }
 .portfolio-info .details-link {

@@ -2,12 +2,13 @@ import { Formik } from "formik";
 import React, { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import axios from "axios";
+import './productModal.css'
 
 const ProductModal = (props) => {
     const [imageSrc, setImageSrc] = useState(null);
 
   return (
-    <Modal show={props.open} onHide={props.handleClose}>
+    <Modal show={props.open} onHide={props.handleClose} className='products-page'>
       <Modal.Header closeButton>
         <Modal.Title>{props?.title}</Modal.Title>
       </Modal.Header>
@@ -48,7 +49,7 @@ const ProductModal = (props) => {
         /* and other goodies */
       }) => (
         <form onSubmit={handleSubmit} method="POST" encType="multipart/form-data">
-          <div>
+          <div className="form-input">
             <label>Name</label>
             <input
               type="name"
@@ -118,7 +119,7 @@ const ProductModal = (props) => {
               <div className="error">{errors.subcategory}</div>
             ) : null}
           </div>
-          <div>
+          <div className="form-input">
             <label>Description-</label>
             <input
               type="description"
@@ -146,6 +147,7 @@ const ProductModal = (props) => {
               onBlur={handleBlur}
               className="form-control"
             />
+            <span>hhhh</span>
             {errors.file && touched.file ? (
               <div className="error">{errors.file}</div>
             ) : null}
