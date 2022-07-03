@@ -15,9 +15,9 @@ const Dashboard = () => {
     const [showModal, setShowModal] = useState(false)
 
     useEffect(()=>{
-        if (!isLoggedIn) {
-            navigate('/admin/login')
-        }   
+        // if (!isLoggedIn) {
+        //     navigate('/admin/login')
+        // }   
     })
 
     const logout = () =>{
@@ -45,7 +45,7 @@ const Dashboard = () => {
                 <div className='sidebar '>
                     <h3>Bharat Gupta <span>Admin</span></h3>
 
-                    <a href="index.html" class="nav-item nav-link active">Dashboard</a>
+                    <a href="index.html" className="nav-item nav-link active">Dashboard</a>
                 </div>
                 <div className='content'>
                     <div className='container-fluid '>
@@ -58,8 +58,8 @@ const Dashboard = () => {
                                 <div className='cardItem'>
                                     <img src={Products} alt="" />
                                     <div className='ms-3'>
-                                        <p class="mb-2">Today Products</p>
-                                        <h6 class="mb-0">$1234</h6>
+                                        <p className="mb-2">Today Products</p>
+                                        <h6 className="mb-0">$1234</h6>
                                     </div>
                                     <div  onClick={openModal}>
                                         <img className='addButton' src={plus} alt="" />
@@ -70,8 +70,8 @@ const Dashboard = () => {
                                 <div className='cardItem'>
                                     <img src={blogger} alt="" />
                                     <div className='ms-3'>
-                                        <p class="mb-2">Today Blog</p>
-                                        <h6 class="mb-0">$1234</h6>
+                                        <p className="mb-2">Today Blog</p>
+                                        <h6 className="mb-0">$1234</h6>
                                     </div>
                                     <div  onClick={openModal}>
                                         <img className='addButton' src={plus} alt=""/>
@@ -80,8 +80,8 @@ const Dashboard = () => {
                             </div>
                         </div>
                         <div className="productsTable">
-                            <h6 class="mb-4">Products Table</h6>
-                            <table class="table table-dark">
+                            <h6 className="mb-4">Products Table</h6>
+                            <table className="table table-dark">
                                 <thead>
                                     <tr>
                                         <th scope="col">No</th>
@@ -117,8 +117,8 @@ const Dashboard = () => {
                             </table>
                         </div>
                         <div className="productsTable">
-                            <h6 class="mb-4">Blog Table</h6>
-                            <table class="table table-dark">
+                            <h6 className="mb-4">Blog Table</h6>
+                            <table className="table table-dark">
                                 <thead>
                                     <tr>
                                         <th scope="col">No</th>
