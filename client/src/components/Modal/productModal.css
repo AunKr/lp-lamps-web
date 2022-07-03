@@ -33,3 +33,42 @@
 .products-page .modal-footer button.btn.btn-secondary {
     background-color: #fe3f40;
 }
+.products-page .modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+    overflow-y: auto;
+    height: calc(100vh - 200px);
+}
+.products-page .modal-body div img {
+    width: 100%;
+}
+
+.file-upload{
+    position: relative;
+}
+.file-upload input{
+    opacity: 0;
+    position: absolute;
+    z-index: 9;
+    top: 29px;
+    left: 0;
+    height: 47px;
+}
+.file-upload span{
+    position: absolute;
+    display: inline-block;
+    background-color: #03a4ed;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 12px 25px;
+    border-radius: 23px;
+    letter-spacing: 0.25px;
+    border: none;
+    outline: none;
+    transition: all .3s;
+    top: 29px;
+    left: 0;
+}

@@ -133,7 +133,7 @@ const ProductModal = (props) => {
               <div className="error">{errors.description}</div>
             ) : null}
           </div>
-          <div>
+          <div className="file-upload">
             <label>File upload</label>
             <input
               id="file"
@@ -147,7 +147,8 @@ const ProductModal = (props) => {
               onBlur={handleBlur}
               className="form-control"
             />
-            <span>hhhh</span>
+            <span>Choose File</span>
+            <p>{values?.file?.name}</p>
             {errors.file && touched.file ? (
               <div className="error">{errors.file}</div>
             ) : null}
@@ -157,7 +158,6 @@ const ProductModal = (props) => {
         </form>
       )}
     </Formik>
-
       </Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" onClick={props.handleClose}>
