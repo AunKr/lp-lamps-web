@@ -101,17 +101,18 @@ const Dashboard = () => {
             Bharat Gupta <span>Admin</span>
           </h3>
 
-          <a href="index.html" className="nav-item nav-link active">
+          <a href="index.html" className=" active">
             Dashboard
           </a>
+          <a className="text-right" onClick={logout}>
+                Logout
+              </a>
         </div>
         <div className="content">
           <div className="container-fluid ">
             <div className="top-bg">
               <h1>Dashboard</h1>
-              <a className="text-right" onClick={logout}>
-                Logout
-              </a>
+            
             </div>
             <div className="row">
               <div className="col-sm-6 col-xl-6">
@@ -189,7 +190,7 @@ const Dashboard = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">1</th>
+                    <td scope="row">1</td>
                     <td>John</td>
                     <td>Doe</td>
                     <td>mark@email.com</td>
@@ -200,7 +201,7 @@ const Dashboard = () => {
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">2</th>
+                    <td scope="row">2</td>
                     <td>Mark</td>
                     <td>Otto</td>
                     <td>mark@email.com</td>
@@ -211,7 +212,7 @@ const Dashboard = () => {
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">3</th>
+                  <td scope="row">3</td>
                     <td>Jacob</td>
                     <td>Thornton</td>
                     <td>jacob@email.com</td>
