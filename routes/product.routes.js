@@ -6,7 +6,7 @@ const productRoute = express.Router();
 
 productRoute.post('/create' ,controller.upload, controller.productCreate);
 productRoute.get('/get' , controller.getAllProduct);
-productRoute.patch('/update/:id', ensureAuthenticated , controller.productUpdate);
-productRoute.delete('/delete/:id', ensureAuthenticated , controller.productDelete);
+productRoute.patch('/update/:id' , controller.productUpdate);
+productRoute.delete('/delete/:id' , controller.productDelete);
 
 module.exports = productRoute;

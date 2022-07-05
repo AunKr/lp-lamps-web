@@ -1,11 +1,17 @@
-import { Formik } from "formik";
 import React, { useState } from "react";
+
+import { Formik } from "formik";
 import { Modal, Button } from "react-bootstrap";
 import axios from "axios";
+import { toast } from "react-toastify";
+
 import './productModal.css'
+import { updateProduct } from "../Products/product.service";
 
 const ProductModal = (props) => {
-    const [imageSrc, setImageSrc] = useState(null);
+    console.log("props.product", props.product);
+    const [imageSrc, setImageSrc] = useState(props.product?.image? props.product.image: null);
+    const [productValue, setProductValue] = useState(props?.product?.image? props.product: null);
 
   return (
     <Modal show={props.open} onHide={props.handleClose} className='products-page'>
@@ -14,20 +20,14 @@ const ProductModal = (props) => {
       </Modal.Header>
       <Modal.Body>
       <Formik
-      initialValues={{ name:'',
-      file: null,
-      category:'', 
-      subcategory:'', 
-      description:'' 
+      initialValues={{ name: productValue? productValue.name:'',
+      file:  productValue? productValue.file: null,
+      category: productValue? productValue.category:'', 
+      subcategory: productValue? productValue.subcategory:'', 
+      description: productValue? productValue.description:'' 
     }}
-      validate={(values) => {
-        const errors = {};
-        if (!values.file) {
-          errors.email = "Choose an image";
-        }
-        return errors;
-      }}
       onSubmit={async(values) => {
+       if(!productValue){
         let formData = new FormData();
         formData.append('name', values.name)
         formData.append('category', values.category)
@@ -36,6 +36,31 @@ const ProductModal = (props) => {
         formData.append('image', values.file)
         const res = await axios.post('http://localhost:4500/product/create',formData)
         console.log("res", res);
+        if(res){
+          toast.success("Post Added Successfully",{
+            theme: 'colored'
+        })
+        props.handleClose()
+        props.onSubmit()
+        } else {
+          toast.error("Something went wrong",{
+            theme: 'colored'
+        })
+        }
+       }else{
+        updateProduct(productValue.id,values)
+        .then((res)=>{
+          console.log("response===>>>>",res);
+          if(res){
+            toast.success("Post Updated Successfully",{
+              theme: 'colored'
+          })
+            props.handleClose()
+            props.onSubmit()
+          }
+        })
+        .catch(err => console.log(err))
+       }
       }}
     >
       {({
@@ -46,6 +71,7 @@ const ProductModal = (props) => {
         handleBlur,
         handleSubmit,
         setFieldValue,
+        isSubmitting
         /* and other goodies */
       }) => (
         <form onSubmit={handleSubmit} method="POST" encType="multipart/form-data">
@@ -133,7 +159,7 @@ const ProductModal = (props) => {
               <div className="error">{errors.description}</div>
             ) : null}
           </div>
-          <div>
+          { !productValue && <div>
             <label>File upload</label>
             <input
               id="file"
@@ -152,8 +178,8 @@ const ProductModal = (props) => {
               <div className="error">{errors.file}</div>
             ) : null}
             <img src={imageSrc}></img>
-          </div>
-          <button type="submit">Submit</button>
+          </div>}
+          <button type="submit" disabled={isSubmitting}>{productValue ? "Update" : "Submit"}</button>
         </form>
       )}
     </Formik>
