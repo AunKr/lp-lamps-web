@@ -130,3 +130,11 @@
  .productsTable table tr:hover {
     background-color: #e0f3ff;
 }
+
+.actionItem{
+    display: flex;
+}
+
+.actionItem div{
+    margin-right: 3px;
+}

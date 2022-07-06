@@ -16,6 +16,7 @@ const Dashboard = () => {
   const { isLoggedIn, setLoggedIn } = useContext(AuthContext);
   const [showModal, setShowModal] = useState(false);
   const [productList, setProductList] = useState([]);
+  const [productCount, setProductCount] = useState(0);
   const [editProductValue, setEditProductValue] = useState({});
   const [deleteProductValue, setDeleteProductValue] = useState({});
 
@@ -42,6 +43,7 @@ const Dashboard = () => {
   useEffect(() => {
     getProducts()
       .then((res) => {
+        setProductCount(res?.count)
         setProductList(res?.rows);
       })
       .catch((err) => console.log(err));
@@ -68,6 +70,7 @@ const Dashboard = () => {
       })
         getProducts()
         .then((res) => {
+          setProductCount(res?.count)
           setProductList(res?.rows);
         })
         .catch((err) => console.log(err));
@@ -79,6 +82,7 @@ const Dashboard = () => {
   const updatedPosts = () => {
     getProducts()
     .then((res) => {
+      setProductCount(res?.count)
       setProductList(res?.rows);
     })
     .catch((err) => console.log(err));
@@ -120,7 +124,7 @@ const Dashboard = () => {
                   <img src={Products} alt="" />
                   <div className="ms-3">
                     <p className="mb-2">Today Products</p>
-                    <h6 className="mb-0">$1234</h6>
+                    <h6 className="mb-0">{productCount < 10 ? `0${productCount}` : productCount}</h6>
                   </div>
                   <div onClick={addProduct}>
                     <img className="addButton" src={plus} alt="" />
@@ -161,7 +165,7 @@ const Dashboard = () => {
                           <td>{val.name}</td>
                           <td>{val.category === 'bike' ? 'E-Bike': val.category === 'scooty'? 'E-Scooty': 'E-Rickshaw'}</td>
                           <td>{val.subcategory === 'head' ? 'Head': val.subcategory === 'tail'? 'Tail': 'Indicator'}</td>
-                          <td>
+                          <td className="actionItem">
                             {" "}
                             <div onClick={()=> editProduct(index)}>
                                 <img src={editing} alt="" />{" "}
