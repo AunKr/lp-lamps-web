@@ -16,17 +16,16 @@ const ConfirmationModal = (props) => {
             <img src={portfolio1} alt="reporting" />
           </div>
           <div className="title-section">
-            <h3>Project information</h3>
+            <h3>Product information</h3>
             <ul>
-              <li><strong>Category</strong>: Web design</li>
-              <li><strong>Client</strong>: ASU Company</li>
-              <li><strong>Project date</strong>: 01 March, 2020</li>
-              <li><strong>Project URL</strong></li>
+              <li><strong>Name</strong>: {props?.product?.name}</li>
+              <li><strong>Category</strong>:{props?.product?.category}</li>
+              <li><strong>SubCategory</strong>: {props?.product?.subcategory}</li>
             </ul>
             <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
+              {/* <h2>This is an example of portfolio detail</h2> */}
               <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+              {props?.product?.description}
               </p>
             </div>
           </div>

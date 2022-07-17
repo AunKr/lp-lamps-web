@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Link, Navigate, Route, Routes } from "react-router-dom";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -10,7 +10,6 @@ import Blog from "./components/Blog/blog";
 import Register from "./components/Login/register";
 import AuthContextProvider from "./components/AuthContextProvider/authContextProvider";
 import SecuredLayout from "./pages/SecuredLayouts/securedLayouts";
-import Dashboard from "./components/Dashboard/dashboard";
 
 const App = () => {
 
@@ -22,8 +21,7 @@ const App = () => {
           <Route path="/products" element={<Products />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/admin/register" element={<Register />} />
-          <Route path="/admin/dashboard" element={<Dashboard />} />
-          {/* <Route path="/admin/*" element={<SecuredLayout />} /> */}
+          <Route path="/admin/*" element={<SecuredLayout />} />
         </Routes>
         <ToastContainer
           position="top-right"

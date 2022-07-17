@@ -10,12 +10,14 @@ const Products = () => {
   const [bikeData, setBikeData] = useState([]);
   const [scootyData, setScootyData] = useState([]);
   const [rickshawData, setRickshawData] = useState([]);
+  const [productData, setProductData] = useState({});
 
   const closeModal = () => {
     setShowModal(false);
   };
 
-  const openModal = () => {
+  const openModal = (val) => {
+    setProductData(val)
     setShowModal(true);
   };
 
@@ -38,7 +40,7 @@ const Products = () => {
   return (
     <div>
       {showModal && (
-        <ConfirmationModal open={showModal} handleClose={closeModal} />
+        <ConfirmationModal open={showModal} product={productData} handleClose={closeModal} />
       )}
       <Header />
       <div className="container">
@@ -65,17 +67,17 @@ const Products = () => {
           <div className="col-lg-10">
             <div className="row">
               {rickshawData && rickshawData.length
-                ? rickshawData.map((bike) => {
+                ? rickshawData.map((val) => {
                     return (
                       <div
                         className="col-lg-4 col-md-6 portfolio-item"
-                        key={bike.image.toString()}
+                        key={val.image.toString()}
                       >
-                        <img src={bike.image} alt="reporting" />
+                        <img src={val.image} alt="reporting" />
                         <div className="portfolio-info">
-                          <h4>{bike.name}</h4>
-                          <p>{bike.description}</p>
-                          <div onClick={openModal}>
+                          <h4>{val.name}</h4>
+                          <p>{val.description}</p>
+                          <div onClick={()=> openModal(val)}>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="24"

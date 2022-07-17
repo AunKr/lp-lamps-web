@@ -7,11 +7,10 @@ const instanceUrl = axios.create({
   transformRequest: [
     function (data, headers) {
       let userData = localStorage.getItem('userData')
-      const token = localStorage.getItem('BearerToken')
+      const token = JSON.parse(userData)?.token
       if (userData) {
-        userData = JSON.parse(userData)
-        if (userData.sessiontoken) {
-          headers.Authorization = 'Bearer ' + userData.sessiontoken
+        if (token) {
+          headers.Authorization = 'Bearer ' + token
         }
       } else if (token) {
         headers.Authorization = 'Bearer ' + token
