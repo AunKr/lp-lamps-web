@@ -33,7 +33,7 @@ const Home = () => {
                     <p>LUXPAL LAMPS is a professional looking HTML template using a Bootstrap 5 (beta 2). This CSS template is free for you provided by <a rel="nofollow" href="https://templatemo.com/page/1" target="_parent">TemplateMo</a>.</p>
                     <form id="search" action="#" method="GET">
                       <fieldset>
-                        <input type="address" name="address" className="email" placeholder="Your website URL..." autocomplete="on" required />
+                        <input type="address" name="address" className="email" placeholder="Your website URL..." autoComplete="on" required />
                       </fieldset>
                       <fieldset>
                         <button type="submit" className="main-button">Analyze Site</button>
