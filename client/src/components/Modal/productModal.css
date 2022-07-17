@@ -91,3 +91,31 @@
     width: 100%;
     margin-bottom: 10px;
 }
+.products-page.Delete-Product.modal .modal-dialog {
+    max-width: 40%;
+    margin: 1.75rem auto;
+}
+.products-page.Delete-Product.modal .modal-body{
+    height: auto;
+}
+.products-page.Delete-Product.modal .modal-footer button {
+    margin-top: 20px;
+    float: right;
+    display: inline-block;
+    background-color: #03a4ed;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 12px 25px;
+    border-radius: 23px;
+    letter-spacing: 0.25px;
+    border: none;
+    outline: none;
+    transition: all .3s;
+    margin-left: 1rem;
+    margin-bottom: 20px;
+}
+.products-page.Delete-Product.modal .modal-footer button.btn.btn-secondary {
+    background-color: #fe3f40;
+}
