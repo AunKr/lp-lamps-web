@@ -53,7 +53,7 @@ const ProductModal = (props) => {
             if (!values.description) {
               errors.description = "Please select description";
             }
-            if (!values.file) {
+            if (!productValue && !values.file) {
               errors.file = "Please select file";
             }
             console.log("errors",errors);
