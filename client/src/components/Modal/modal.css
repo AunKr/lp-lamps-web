@@ -1,5 +1,8 @@
+.add-products .modal{
+overflow-y: hidden;
+}
 .add-products .modal-dialog {
-    max-width: 90%;
+    max-width: 70%;
     margin: 1.75rem auto;
 }
 .add-products .btn-close:focus {
@@ -54,4 +57,15 @@
 }
 .add-products .modal-footer button.btn.btn-secondary {
     background-color: #fe3f40;
+}
+
+.add-products .modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+    overflow: scroll;
+    height: 100;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: calc(100vh - 200px);
 }

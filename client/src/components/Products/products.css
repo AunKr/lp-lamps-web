@@ -79,12 +79,14 @@
 }
 .productsCategories h2 {
     font-size: 18px;
-    margin-bottom: 13px;
+    margin-bottom: 13px;    
+    padding-left: 0.5rem;
 }
 .productsCategories ul{
     float: left;
     width: 100%;    
     padding: 0;
+    padding-left: 0.5rem;
 }
 .productsCategories ul li{
     float: left;
