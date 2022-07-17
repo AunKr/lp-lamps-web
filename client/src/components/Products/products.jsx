@@ -4,7 +4,7 @@ import Footer from "../Footer/footer";
 import "./products.css";
 import ConfirmationModal from "../Modal/modal";
 import { getProducts } from "./product.service";
-// import motorIcon from '../../assets/images/electric-motor.png'
+import motorIcon from '../../assets/images/electric-motor.png'
 
 const Products = () => {
   const [showModal, setShowModal] = useState(false);
@@ -55,15 +55,15 @@ const Products = () => {
             <h2>Products Categories</h2>
             <ul>
               <li>               
-                <a href="#">  <span><img src="" alt=""/></span>E-bike</a>
+                <a href="#">  <span><img src={motorIcon} alt=""/></span>E-bike</a>
               </li>
               <li>
              
-                <a href="#"> <span><img src="" alt=""/></span>E-Scooty</a>
+                <a href="#"> <span><img src={motorIcon} alt=""/></span>E-Scooty</a>
               </li>
               <li>
              
-                <a href="#"> <span><img src="" alt=""/></span>E-Rickshaw</a>
+                <a href="#"> <span><img src={motorIcon} alt=""/></span>E-Rickshaw</a>
               </li>
             </ul>
           </div>
@@ -124,7 +124,7 @@ const Products = () => {
                         <div className="portfolio-info">
                           <h4>{bike.name}</h4>
                           <p>{bike.description}</p>
-                          <div className="add-icon" onClick={openModal}>
+                          <div className="add-icon" onClick={()=> openModal(bike)}>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="24"
@@ -165,7 +165,7 @@ const Products = () => {
                         <div className="portfolio-info">
                           <h4>{bike.name}</h4>
                           <p>{bike.description}</p>
-                          <div className="add-icon" onClick={openModal}>
+                          <div className="add-icon" onClick={()=> openModal(bike)}>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="24"

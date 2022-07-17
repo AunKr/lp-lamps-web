@@ -11,7 +11,6 @@ const DeleteModal = (props) => {
     <Modal
       show={props.open}
       onHide={props.handleClose}
-      className="products-page"
     >
       <Modal.Header closeButton>
         <Modal.Title>{props?.title}</Modal.Title>

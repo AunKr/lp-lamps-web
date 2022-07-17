@@ -13,7 +13,7 @@ const ConfirmationModal = (props) => {
       <Modal.Body>
         <div className="full-size">
           <div className="images-section">
-            <img src={portfolio1} alt="reporting" />
+            <img src={props?.product?.image} alt="reporting" />
           </div>
           <div className="title-section">
             <h3>Product information</h3>
