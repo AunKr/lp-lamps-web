@@ -6,34 +6,30 @@ const service = require('../shared/service.response.js')
 
 exports.register = async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { name, email, password, phone } = req.body;
     const isDuplicateUser = await User.getFirst({ email: email });
     //This will check that user is Registered User or not
     if (isDuplicateUser) {
-      return res.json({
-        message: "Already registered with this email id!!",
-        type: "error",
-      });
+      return service.responseError(res, service.createError(service.ERROR.ERROR_AUTHORIZATION_FAIL, 'Already registered with this email id'));
     } else {
       let hashedpassword = await bcrypt.hash(password, 12);
       if (hashedpassword) {
         req.body.password = hashedpassword;
         const userRegistered = await User.create(req.body);
         if (userRegistered) {
-          return res.status(201).json({
-            message: "Registration Successful!!",
-            type: "success",
-          });
+          const result = {
+            message: 'Registeration Successful!!',
+            type: 'success',
+            userData: userRegistered,
+          }
+          return service.responseSuccess(res, result);
         } else {
-          return res.json({
-            message: error,
-            type: "error",
-          });
+          return service.responseError(res, service.createError(service.ERROR.ERROR_INTERNAL, error));
         }
       }
     }
   } catch (error) {
-    res.send({ error: error }).status(500);
+    return service.responseError(res, service.createError(service.ERROR.ERROR_BAD_REQUEST, "Something went wrong"));
   }
 };
 
@@ -45,7 +41,7 @@ exports.login = async (req, res) => {
 		const passwordMatched = await bcrypt.compare(password, user.password);
 		if (passwordMatched) {
 			const token = tokenService.issueToken({email: email, password: user.password})
-            const result = {
+        const result = {
 				message: 'LoggIn Successful!!',
 				type: 'success',
 				token: token,

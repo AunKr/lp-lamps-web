@@ -1,19 +1,19 @@
 import React, { useContext } from "react";
-import {useNavigate, useLocation} from 'react-router-dom'
+import { useNavigate, useLocation } from "react-router-dom";
 
 import { Formik } from "formik";
 
 import "./login.css";
 import loginBg from "../../assets/images/login-bg.jpg";
-import { login } from './login.service'
+import { login } from "./login.service";
 import { toast } from "react-toastify";
 
-import { AuthContext } from '../AuthContextProvider/authContextProvider'
+import { AuthContext } from "../AuthContextProvider/authContextProvider";
+import { useEffect } from "react";
 
 const Login = () => {
-    const navigate = useNavigate()
-    const location = useLocation()
-    const {isLoggedIn,setLoggedIn, setSession} = useContext(AuthContext)
+  const navigate = useNavigate();
+  const { isLoggedIn, setLoggedIn, setSession } = useContext(AuthContext);
   return (
     <div>
       <div className="container">
@@ -35,31 +35,37 @@ const Login = () => {
                 ) {
                   errors.email = "Invalid email address";
                 }
-                if(!values.password){
-                    errors.password = "Please enter password";
+                if (!values.password) {
+                  errors.password = "Please enter password";
                 }
                 return errors;
               }}
               onSubmit={(values, { setSubmitting }) => {
                 login(values)
-                .then(res => {
-                    if(res.success){
-                        const userData = {...res?.data.userData, token: res?.data.token}
-                        localStorage.setItem('userData', JSON.stringify(userData))
-                        setSession(res?.data.token)
-                        setLoggedIn(true)
-                        toast.success(res?.data?.message,{
-                            theme: 'colored'
-                        })
-                        console.log("login isLoggedIn",isLoggedIn);
-                        navigate('/admin/dashboard')
+                  .then((res) => {
+                    if (res.success) {
+                      const userData = {
+                        ...res?.data.userData,
+                        token: res?.data.token,
+                      };
+                      localStorage.setItem(
+                        "userData",
+                        JSON.stringify(userData)
+                      );
+                      setSession(res?.data.token);
+                      setLoggedIn(true);
+                      toast.success(res?.data?.message, {
+                        theme: "colored",
+                      });
+                      console.log("login isLoggedIn", isLoggedIn);
+                      navigate("/admin/dashboard");
                     } else {
-                        toast.error(res?.error?.message,{
-                            theme: 'colored'
-                        })
+                      toast.error(res?.error?.message, {
+                        theme: "colored",
+                      });
                     }
-                })
-                .catch(err => console.log(err))
+                  })
+                  .catch((err) => console.log(err));
               }}
             >
               {({
@@ -72,8 +78,9 @@ const Login = () => {
                 isSubmitting,
                 /* and other goodies */
               }) => (
-                <form onSubmit={handleSubmit} className='loginFrom'>
+                <form onSubmit={handleSubmit} className="loginFrom">
                   <h3>Account Login</h3>
+                  <label>Email*</label>
                   <input
                     type="email"
                     name="email"
@@ -82,9 +89,10 @@ const Login = () => {
                     onBlur={handleBlur}
                     value={values.email}
                   />
-                  {errors.email && touched.email ?(
+                  {errors.email && touched.email ? (
                     <div className="error">{errors.email}</div>
-                  ): null}
+                  ) : null}
+                  <label>Password*</label>
                   <input
                     type="password"
                     name="password"
@@ -94,12 +102,10 @@ const Login = () => {
                     onBlur={handleBlur}
                     value={values.password}
                   />
-                  {errors.password && touched.password ?(
+                  {errors.password && touched.password ? (
                     <div className="error">{errors.password}</div>
-                  ): null}
-                  <button type="submit">
-                    Submit
-                  </button>
+                  ) : null}
+                  <button type="submit">Sign In</button>
                   <div className="sign-in-account">
                     <span>Don't have an account?</span>
                     <a href="/admin/register">Sign Up</a>

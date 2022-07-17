@@ -10,17 +10,19 @@ import EditProducts from "../../components/Products/editProducts";
 const SecuredLayout = (props) => {
   const navigate = useNavigate();
   const { isLoggedIn } = useContext(AuthContext);
+  const session =  JSON.parse(localStorage.getItem('userData'))
 
   useEffect(() => {
     if (!isLoggedIn) {
       navigate("/admin/login");
+    }else {
+      navigate("/admin/dashboard");
     }
-  }, [isLoggedIn]);
+  }, []);
 
   return (
     <Routes>
-      {isLoggedIn ? (
-        <>
+      <>
           <Route
             path="dashboard"
             element={
@@ -39,12 +41,8 @@ const SecuredLayout = (props) => {
               isLoggedIn ? <EditProducts /> : <Navigate to={"admin/login"} />
             }
           />
+           <Route path="login" element={<Login />} />
         </>
-      ) : (
-        <>
-            <Route path="login" element={<Login />} />
-        </>
-      )}
     </Routes>
   );
 };

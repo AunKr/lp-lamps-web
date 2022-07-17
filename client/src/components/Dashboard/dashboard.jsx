@@ -8,6 +8,7 @@ import deleteIcon from "../../assets/images/delete.png";
 import { AuthContext } from "../AuthContextProvider/authContextProvider";
 import { useNavigate } from "react-router-dom";
 import ConfirmationModal from "../Modal/productModal";
+import DeleteModal from "../Modal/deleteModal";
 import { getProducts, deleteProduct } from "../Products/product.service.js";
 import { toast } from 'react-toastify'
 
@@ -19,12 +20,14 @@ const Dashboard = () => {
   const [productCount, setProductCount] = useState(0);
   const [editProductValue, setEditProductValue] = useState({});
   const [deleteProductValue, setDeleteProductValue] = useState({});
+  const session =  JSON.parse(localStorage.getItem('userData'))
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
 
   useEffect(() => {
-    // if (!isLoggedIn) {
-    //     navigate('/admin/login')
-    // }
-  });
+    if (!isLoggedIn) {
+        navigate('/admin/login')
+    }
+  },[]);
 
   const logout = () => {
     localStorage.removeItem("userData");
@@ -33,6 +36,7 @@ const Dashboard = () => {
   };
 
   const closeModal = () => {
+    setShowDeleteModal(false);
     setShowModal(false);
   };
 
@@ -60,9 +64,14 @@ const Dashboard = () => {
     setShowModal(true)
   }
 
-  const deletetProduct = (index) => {
-    const product = productList[index]
-    deleteProduct(product?.id)
+  const handleDeleteClick = (value) => {
+    const product = productList[value]
+    setDeleteProductValue(product)
+    setShowDeleteModal(true)
+  }
+
+  const deletetProduct = () => {
+    deleteProduct(deleteProductValue?.id)
     .then((res) => {
       if(res){
         toast.error("Post Deleted Successfully",{
@@ -70,6 +79,7 @@ const Dashboard = () => {
       })
         getProducts()
         .then((res) => {
+          setShowDeleteModal(false)
           setProductCount(res?.count)
           setProductList(res?.rows);
         })
@@ -99,10 +109,19 @@ const Dashboard = () => {
           onSubmit={updatedPosts}
         />
       )}
+      {showDeleteModal && (
+        <DeleteModal
+          open={showDeleteModal}
+          title={"Delete Product"}
+          handleClose={closeModal}
+          product={deleteProductValue}
+          onSubmit={deletetProduct}
+        />
+      )}
       <div className="dashboard">
         <div className="sidebar ">
           <h3>
-            Bharat Gupta <span>Admin</span>
+           {session?.name} <span>Admin</span>
           </h3>
 
           <a href="index.html" className=" active">
@@ -170,7 +189,7 @@ const Dashboard = () => {
                             <div onClick={()=> editProduct(index)}>
                                 <img src={editing} alt="" />{" "}
                             </div>
-                            <div onClick={()=> deletetProduct(index)}>
+                            <div onClick={()=> handleDeleteClick(index)}>
                                 <img src={deleteIcon} alt="" />{" "}
                             </div>
                           </td>

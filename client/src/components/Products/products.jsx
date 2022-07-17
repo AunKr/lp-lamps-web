@@ -4,19 +4,21 @@ import Footer from "../Footer/footer";
 import "./products.css";
 import ConfirmationModal from "../Modal/modal";
 import { getProducts } from "./product.service";
-import motorIcon from '../../assets/images/electric-motor.png'
+// import motorIcon from '../../assets/images/electric-motor.png'
 
 const Products = () => {
   const [showModal, setShowModal] = useState(false);
   const [bikeData, setBikeData] = useState([]);
   const [scootyData, setScootyData] = useState([]);
   const [rickshawData, setRickshawData] = useState([]);
+  const [productData, setProductData] = useState({});
 
   const closeModal = () => {
     setShowModal(false);
   };
 
-  const openModal = () => {
+  const openModal = (val) => {
+    setProductData(val)
     setShowModal(true);
   };
 
@@ -39,7 +41,7 @@ const Products = () => {
   return (
     <div>
       {showModal && (
-        <ConfirmationModal open={showModal} handleClose={closeModal} />
+        <ConfirmationModal open={showModal} product={productData} handleClose={closeModal} />
       )}
       <Header />
       <div className="container-fluid">
@@ -53,15 +55,15 @@ const Products = () => {
             <h2>Products Categories</h2>
             <ul>
               <li>               
-                <a href="#">  <span><img src={motorIcon} alt=""/></span>E-bike</a>
+                <a href="#">  <span><img src="" alt=""/></span>E-bike</a>
               </li>
               <li>
              
-                <a href="#"> <span><img src={motorIcon} alt=""/></span>E-Scooty</a>
+                <a href="#"> <span><img src="" alt=""/></span>E-Scooty</a>
               </li>
               <li>
              
-                <a href="#"> <span><img src={motorIcon} alt=""/></span>E-Rickshaw</a>
+                <a href="#"> <span><img src="" alt=""/></span>E-Rickshaw</a>
               </li>
             </ul>
           </div>
@@ -71,17 +73,17 @@ const Products = () => {
                   E-bike
                 </h1>
                 {rickshawData && rickshawData.length
-                ? rickshawData.map((bike) => {
+                ? rickshawData.map((val) => {
                     return (                     
                       <div
                         className="col-lg-4 col-md-6 portfolio-item"
-                        key={bike.image.toString()}
+                        key={val.image.toString()}
                       >
-                        <img src={bike.image} alt="reporting" />
+                        <img src={val.image} alt="reporting" />
                         <div className="portfolio-info">
-                          <h4>{bike.name}</h4>
-                          <p>{bike.description}</p>
-                          <div className="add-icon" onClick={openModal}>
+                          <h4>{val.name}</h4>
+                          <p>{val.description}</p>
+                          <div className="add-icon" onClick={()=> openModal(val)}>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="24"
