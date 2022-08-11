@@ -1,0 +1,125 @@
+.productsTitle{
+    font-size: 20px;
+    margin-bottom: 1rem;
+    background-color: #fafafa;
+    box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%), 0 0.9375rem 1.40625rem rgb(4 9 20 / 3%), 0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
+    padding: 16px 0;
+}
+.topTitle {
+    margin-top: 130px !important;
+    text-align: center;
+}
+.portfolio-item{
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.portfolio-item img{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    overflow: hidden;
+    background-color: #fff;
+}
+.portfolio-item:hover img {
+    top: -30px;
+}
+.portfolio-info {
+    opacity: 0;
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: -50px;
+    z-index: 3;
+    transition: all ease-in-out 0.3s;
+    background: #fe3f40;
+    padding: 15px 20px;
+}
+.portfolio-item:hover .portfolio-info {
+    opacity: 1;
+    bottom: 0;
+}
+.portfolio-info h4 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+}
+.portfolio-info p {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 70%;
+}
+
+.portfolio-info a,
+.portfolio-info .add-icon{
+    position: absolute;
+    right: 50px;
+    font-size: 24px;
+    top: calc(50% - 18px);
+    color: rgba(255, 255, 255, 0.7);
+    transition: ease-in-out 0.3s;
+}
+.portfolio-info a svg ,
+.portfolio-info .add-icon svg {
+    fill: #fff;
+}
+.portfolio-info .add-icon:hover svg{
+    fill: #000;
+}
+.portfolio-info .details-link {
+    right: 15px;
+}
+.productsCategories h2 {
+    font-size: 18px;
+    margin-bottom: 13px;    
+    padding-left: 0.5rem;
+}
+.productsCategories ul{
+    float: left;
+    width: 100%;    
+    padding: 0;
+    padding-left: 0.5rem;
+}
+.productsCategories ul li{
+    float: left;
+    width: 100%;
+    padding: 5px 0;
+    margin-bottom: 13px;
+}
+.productsCategories ul li span img {
+    width: 100%;
+}
+.productsCategories ul li span {
+    background: #ffeeda;
+    width: 45px;
+    height: 45px;
+    float: left;
+    border-radius: 100%;
+    position: relative;
+    padding: 10px;    
+    margin-right:10px;
+}
+.productsCategories ul li a{
+    color: #2a2a2a;
+    font-size: 1rem; 
+    font-weight: 400;    
+    width: auto;
+    float: left;
+    display: flex;
+    align-items: center; transition: all .2s ease-in-out;
+}
+.productsCategories ul li a:hover{
+    color: #000;
+    transform: scale(1.2);
+}
+.productsCategories ul li a:hover span {
+    background: #ffeb3b;
+}
