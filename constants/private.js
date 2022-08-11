@@ -1,3 +1,0 @@
-module.exports = {
-  AUTHORIZATION_TOKEN_KEY: "db4OIsj+BXE3NZDy0t7W3TcNekrH+9d/1sFnWG8HnV7TZY50iTOdtVWJG8abWvB1GlOgJuQZdcF2Luqm/hccMw=="
-}
