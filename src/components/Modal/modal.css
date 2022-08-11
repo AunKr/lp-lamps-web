@@ -1,0 +1,71 @@
+.add-products .modal{
+overflow-y: hidden;
+}
+.add-products .modal-dialog {
+    max-width: 70%;
+    margin: 1.75rem auto;
+}
+.add-products .btn-close:focus {
+    outline: 0;
+    box-shadow: inherit;
+    opacity: 1;
+}
+.full-size {
+    width: 100%;
+    float: left;
+}
+.images-section {
+    width: 50%;
+    float: left;
+}
+.images-section img {
+    width: 100%;
+}
+.title-section{
+    width: 47%;
+    float:right;
+}
+.title-section ul {
+    margin: 0;
+    padding: 0;
+}
+.title-section ul li + li {
+    margin-top: 10px;
+    font-size: 15px;
+}
+.portfolio-description {
+    padding-top: 30px;
+}
+.portfolio-description h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.add-products .modal-footer button.btn{
+    display: inline-block;
+    background-color: #03a4ed;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 12px 25px;
+    border-radius: 23px;
+    letter-spacing: 0.25px;
+    border: none;
+    outline: none;
+    transition: all .3s;
+}
+.add-products .modal-footer button.btn.btn-secondary {
+    background-color: #fe3f40;
+}
+
+.add-products .modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+    overflow: scroll;
+    height: 100;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: calc(100vh - 200px);
+}
