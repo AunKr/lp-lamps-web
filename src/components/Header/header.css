@@ -456,20 +456,16 @@ header
       float: right;
       width: 60%;
       display: none;
-      -webkit-transition: all 0s ease 0s;
-      -moz-transition: all 0s ease 0s;
-      -o-transition: all 0s ease 0s;
-      transition: all 0s ease 0s;
+      transition: 0.3s all linear;
       margin-left: 0px;
       position: absolute;
       right: 0;
+      background: #f7f7f7 !important;
     }
     .background-header .nav {
       margin-top: 80px;
     }
-    .header-area.header-sticky .nav {
-      margin-top: 100px;
-    }
+    
     .header-area .main-nav .nav li {
       width: 100%;
       background: #fff;
