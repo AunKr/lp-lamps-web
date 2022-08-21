@@ -94,7 +94,7 @@ const Products = () => {
               </li>
             </ul>
           </div>
-          <div className="col-lg-10">
+          <div className="col-lg-10 productsDetails">
             <div className="row">
               <h1 className="productsTitle">Head Light</h1>
               {headLightData && headLightData.length

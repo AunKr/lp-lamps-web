@@ -179,6 +179,9 @@ Banner Style
   position: relative;
   overflow: hidden;
 }
+.main-banner img{
+  width: 100%;
+}
 
 .main-banner:after {
   content: '';
@@ -454,7 +457,7 @@ Portfolio
   top: 0;
   visibility: hidden;
   position: absolute;
-  z-index: 2;
+  z-index: 99;
   transition: all 0.5s;
 }
 
@@ -548,6 +551,7 @@ Blog
 .our-blog .left-image img {
   border-radius: 20px;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+  width: 100%;
 }
 
 .our-blog .left-image .info {
@@ -593,10 +597,6 @@ Blog
   position: absolute;
   bottom: -80px;
   left: 0;
-}
-
-.our-blog .right-list {
-  margin-left: 30px;
 }
 
 .our-blog .right-list ul li {
@@ -906,6 +906,9 @@ responsive
   .our-blog .right-list {
     margin-left: 0px;
   }
+  .our-blog .right-list ul{
+    padding-left: 0;
+  }
   .our-blog .right-list ul li {
     display: inline-block;
     margin-top: 0px;
@@ -928,4 +931,5 @@ responsive
   .phone-info h4 span i {
     margin-left: 0px;
   }
+
 }

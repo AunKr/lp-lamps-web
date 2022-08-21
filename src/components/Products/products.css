@@ -123,3 +123,9 @@
 .productsCategories ul li a:hover span {
     background: #ffeb3b;
 }
+@media (max-width: 992px) {
+.productsDetails .row{
+    padding: 0 1.5rem;
+}
+
+}

@@ -62,7 +62,7 @@ header
     transition: all 0.3s ease 0s;
   }
   .header-area .main-nav .logo img {
-    width: 200px;
+    width: 100px;
 }
   
   .header-area .main-nav .logo h4 {
@@ -106,6 +106,10 @@ header
   .header-area .main-nav .nav li {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .header-area .main-nav .nav li.mobileShow{
+    display: none;
+    cursor: pointer;
   }
   
   .header-area .main-nav .nav li:last-child {
@@ -373,7 +377,6 @@ header
   }
   
   @media (max-width: 992px) {
-    .header-area .main-nav .nav li:last-child  ,
     .background-header .main-nav .nav li:last-child {
       display: none;
     }
@@ -384,6 +387,38 @@ header
   }
   
   @media (max-width: 767px) {
+    .header-area .main-nav .nav li.mobileShow {
+      display: block;
+      position: absolute;
+      right: 5px;
+      width: auto;
+      top: -23px;
+      background: #fe3f40!important;
+      width: 25px;
+      height: 25px;
+      float: right;
+      border-radius: 1000%;
+  }
+  .header-area .main-nav .nav li.mobileShow a {
+    background: transparent !important;
+    height: auto !important;
+    line-height: 26px !important;
+    color: #fff !important;
+}
+.header-area .main-nav .nav li.mobileShow a:hover{
+  background: #fe3f40!important;
+  border-radius: 1000%;
+  color: #fff !important;
+}
+.header-area .main-nav .nav li:last-child a:hover{
+  color: #fe3f40!important;
+}
+.header-area .main-nav .nav li .main-red-button a {
+  background: transparent !important;
+  background: #f7f7f7 !important;
+  color: #191a20 !important;
+  border-radius: inherit;
+}
     .background-header .main-nav .nav {
       margin-top: 80px !important;
     }
@@ -418,20 +453,19 @@ header
       overflow: hidden;
     }
     .header-area .main-nav .nav {
-      float: none;
-      width: 100%;
+      float: right;
+      width: 60%;
       display: none;
       -webkit-transition: all 0s ease 0s;
       -moz-transition: all 0s ease 0s;
       -o-transition: all 0s ease 0s;
       transition: all 0s ease 0s;
       margin-left: 0px;
+      position: absolute;
+      right: 0;
     }
     .background-header .nav {
       margin-top: 80px;
-    }
-    .header-area .main-nav .nav li:first-child {
-      border-top: 1px solid #eee;
     }
     .header-area.header-sticky .nav {
       margin-top: 100px;
@@ -454,6 +488,9 @@ header
     .header-area .main-nav .nav li a:hover {
       background: #eee !important;
       color: #fe3f40!important;
+    }
+    .header-area .main-nav .nav li:last-child a{
+      font-weight: 500;
     }
     .header-area .main-nav .nav li.submenu ul {
       position: relative;
