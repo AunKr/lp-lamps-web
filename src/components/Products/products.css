@@ -3,7 +3,7 @@
     margin-bottom: 1rem;
     background-color: #fafafa;
     box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%), 0 0.9375rem 1.40625rem rgb(4 9 20 / 3%), 0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
-    padding: 16px 0;
+    padding: 16px;
 }
 .topTitle {
     margin-top: 130px !important;
@@ -122,4 +122,10 @@
 }
 .productsCategories ul li a:hover span {
     background: #ffeb3b;
+}
+@media (max-width: 992px) {
+.productsDetails .row{
+    padding: 0 1.5rem;
+}
+
 }

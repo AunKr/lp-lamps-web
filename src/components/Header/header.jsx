@@ -21,7 +21,7 @@ const Header = () => {
                                 <img src={LogoImage} alt=""/>
                             </a>
                             <ul className={`nav ${sideBar ? 'openSideBar' : ''}`} >
-                                <li><a onClick={closeSideBar}>X</a></li>
+                                <li className="mobileShow"><a onClick={closeSideBar}>X</a></li>
                                 <li className="scroll-to-section"><a href="/#top" className="active">Home</a></li>
                                 <li className="scroll-to-section"><a href="/#about" className="">About Us</a></li>
                                 <li className="scroll-to-section hoverNav"><a href="/#portfolio">Products</a></li>
