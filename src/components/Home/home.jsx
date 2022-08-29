@@ -25,7 +25,8 @@ const Home = () => {
   }
   const OPTIONS = {
     autoplay: true,
-    interval: 2000,
+    pauseOnHover: false,
+    interval: 3000,
     type: 'loop',
   }
 
@@ -39,7 +40,7 @@ const Home = () => {
             <div className="col-lg-12">
               <div className="row">
                 <div className="col-lg-6 align-self-center">
-                  <div className="left-content header-text animate__animated animate__backInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                  <div className="left-content header-text animate__animated animate__backInLeft" data-wow-duration="2s" data-wow-delay="2s">
                     <h3>WELCOME TO LUXPAL LAMPS PVT LTD</h3>
                     <h2>Smart Lighting<em> Solutions </em><span> for Electrical Vehicles</span></h2>
                     {/* <p>LUXPAL LAMPS is a professional looking HTML template using a Bootstrap 5 (beta 2). This CSS template is free for you provided by <a rel="nofollow" href="https://templatemo.com/page/1" target="_parent">TemplateMo</a>.</p> */}

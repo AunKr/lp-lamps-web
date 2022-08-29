@@ -2,7 +2,7 @@
     max-width: 50%;
     margin: 1.75rem auto;
 }
-.form-input input , .products-page select {
+.form-input input , .products-page select, textarea {
     width: 100%;
     height: 46px;
     border-radius: 33px;

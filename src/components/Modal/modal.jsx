@@ -7,7 +7,7 @@ const ConfirmationModal = (props) => {
   return (
     <Modal show={props.open} onHide={props.handleClose} className='add-products'>
       <Modal.Header closeButton>
-        <Modal.Title>Products Details</Modal.Title>
+        <Modal.Title>Product Details</Modal.Title>
       </Modal.Header>
 
       <Modal.Body>

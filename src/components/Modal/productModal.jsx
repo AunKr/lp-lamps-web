@@ -164,7 +164,7 @@ const ProductModal = (props) => {
               </div>
               <div className="form-input">
                 <label>Description*</label>
-                <input
+                <textarea
                   type="description"
                   name="description"
                   placeholder="Enter Description"
