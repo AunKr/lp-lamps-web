@@ -2,6 +2,11 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import './style.css'
 import bannerRight from '../../assets/images/banner-right-image.png'
+import gifImage1 from '../../assets/slider1.gif'
+import gifImage2 from '../../assets/slider2.gif'
+import gifImage3 from '../../assets/slider3.gif'
+import gifImage4 from '../../assets/slider4.gif'
+import gifImage5 from '../../assets/slider5.gif'
 import portfolioImage from '../../assets/images/portfolio-image.png'
 import blogDec from '../../assets/images/blog-dec.png'
 import blogThumb from '../../assets/images/blog-thumb-01.jpg'
@@ -9,12 +14,19 @@ import bigblogthumb from '../../assets/images/big-blog-thumb.jpg'
 import Header from '../Header/header'
 import Footer from '../Footer/footer'
 import ContactUs from '../ContactUs/contactUs'
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+// Default theme
+import '@splidejs/react-splide/dist/css/splide.min.css';
 
 const Home = () => {
   const navigate = useNavigate()
-
   const changeProductHandler = () => {
     navigate('/products')
+  }
+  const OPTIONS = {
+    autoplay: true,
+    interval: 2000,
+    type: 'loop',
   }
 
   return (
@@ -28,23 +40,43 @@ const Home = () => {
               <div className="row">
                 <div className="col-lg-6 align-self-center">
                   <div className="left-content header-text animate__animated animate__backInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                    <h6>Welcome to LUXPAL LAMPS</h6>
-                    <h2>We Make <em>Digital Ideas</em> &amp; <span>SEO</span> Marketing</h2>
-                    <p>LUXPAL LAMPS is a professional looking HTML template using a Bootstrap 5 (beta 2). This CSS template is free for you provided by <a rel="nofollow" href="https://templatemo.com/page/1" target="_parent">TemplateMo</a>.</p>
-                    <form id="search" action="#" method="GET">
+                    <h3>WELCOME TO LUXPAL LAMPS PVT LTD</h3>
+                    <h2>Smart Lighting<em> Solutions </em><span> for Electrical Vehicles</span></h2>
+                    {/* <p>LUXPAL LAMPS is a professional looking HTML template using a Bootstrap 5 (beta 2). This CSS template is free for you provided by <a rel="nofollow" href="https://templatemo.com/page/1" target="_parent">TemplateMo</a>.</p> */}
+                    {/* <form id="search" action="#" method="GET">
                       <fieldset>
                         <input type="address" name="address" className="email" placeholder="Your website URL..." autoComplete="on" required />
                       </fieldset>
                       <fieldset>
                         <button type="submit" className="main-button">Analyze Site</button>
                       </fieldset>
-                    </form>
+                    </form> */}
                   </div>
                 </div>
                 <div className="col-lg-6">
-                  <div className="right-image animate__animated animate__backInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                <Splide aria-label="My Favorite Images"
+                options={OPTIONS}
+                >
+                  <SplideSlide>
+                    <img src={gifImage5} alt="Image 2"/>
+                  </SplideSlide>
+                  <SplideSlide>
+                    <img src={gifImage1} alt="Image 1"/>
+                  </SplideSlide>
+                  <SplideSlide>
+                    <img src={gifImage2} alt="Image 2"/>
+                  </SplideSlide>
+                  <SplideSlide>
+                    <img src={gifImage3} alt="Image 1"/>
+                  </SplideSlide>
+                  <SplideSlide>
+                    <img src={gifImage4} alt="Image 2"/>
+                  </SplideSlide>
+                </Splide>
+
+                  {/* <div className="right-image animate__animated animate__backInRight" data-wow-duration="1s" data-wow-delay="0.5s">
                     <img src={bannerRight} alt="team meeting" />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -53,12 +85,25 @@ const Home = () => {
       </div>
       {/* ***** main-banner End ***** */}
       {/* <AboutUs/> */}
+      <div id="about" className="about-us section">
+        <div className="container">
+          <div className="row">
+            <h4>We are the Manufacturers of ICAT approved LED and Conventional lights for Electric Vehicles. 
+              Backed by more than 4 decades of experience in the Automotive Lighting Industry, 
+              we work as a Lighting Consultant for the Electric Vehicle Manufacturers and fulfill all the 
+              lighting requirements from the scratch, right from designing and developing the lights as per the requirement
+              to Tool Development and then ultimately manufacturing the finished product at our ICAT Approved Plant. 
+              One can even opt from our wide gamut of ‘Off the shelf’ Lights.
+            </h4>
+          </div>
+        </div>
+      </div>
       <div id="portfolio" class="our-portfolio section">
         <div class="container">
           <div class="row">
             <div class="col-lg-6 offset-lg-3">
               <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                <h2>See What Our Agency <em>Offers</em> &amp; What We <span>Provide</span></h2>
+                <h2>See What LUXPAL LAPMS <em>Offers</em> &amp; What We <span>Provide</span></h2>
               </div>
             </div>
           </div>
@@ -68,19 +113,6 @@ const Home = () => {
                 <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
                   <div class="hidden-content">
                     <h4>SEO Analysis</h4>
-                    <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
-                  </div>
-                  <div class="showed-content">
-                    <img src={portfolioImage} alt="" />
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-              <a href="#">
-                <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-                  <div class="hidden-content">
-                    <h4>Website Reporting</h4>
                     <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
                   </div>
                   <div class="showed-content">
