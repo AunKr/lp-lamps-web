@@ -824,6 +824,10 @@ responsive
 }
 
 @media (max-width: 992px) {
+  .about-us h4 {
+    font-size: 17px;
+    line-height: 37px;
+}
   .main-banner {
     padding-top: 196px;
   }
@@ -840,14 +844,7 @@ responsive
   .main-banner .left-content form input {
     width: 100%!important;
   }
-  #about {
-    margin-top: 0px;
-  }
-  .about-us {
-    position: relative;
-    background-image: none;
-    padding: 0px;
-  }
+
   .about-us .left-image {
     margin-right: 0px;
     position: absolute;

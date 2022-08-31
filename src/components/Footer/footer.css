@@ -44,6 +44,7 @@ footer p {
     margin: 0 !important;
     padding-top: 11px;
     font-weight: 500;
+    display: flex;
 }
 .addresSection p span {
     width: 25px;
