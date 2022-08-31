@@ -58,7 +58,7 @@ const Home = () => {
                     </SplideSlide>
                     <SplideSlide>
                       <div className='ButtonSlide'>
-                        <h3>E-Bile</h3>
+                        <h3>E-Bike</h3>
                         <Button type='Button'> Know More</Button>
                       </div>
 

@@ -184,6 +184,8 @@ Banner Style
 }
 .main-banner .splideSlide img{
   height: 95%;
+  margin-top: 6px;
+  border-radius: 5px;
 }
 .main-banner .splideSlide .ButtonSlide {
   position: absolute;
@@ -845,9 +847,9 @@ responsive
   }
   .about-us {
     position: relative;
-    background-image: none;
     padding: 0px;
   }
+ 
   .about-us .left-image {
     margin-right: 0px;
     position: absolute;
