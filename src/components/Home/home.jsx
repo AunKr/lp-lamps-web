@@ -1,7 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import './style.css'
-import bannerRight from '../../assets/images/banner-right-image.png'
 import gifImage1 from '../../assets/slider1.gif'
 import gifImage2 from '../../assets/slider2.gif'
 import gifImage3 from '../../assets/slider3.gif'
@@ -15,6 +14,7 @@ import Header from '../Header/header'
 import Footer from '../Footer/footer'
 import ContactUs from '../ContactUs/contactUs'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { Button } from 'react-bootstrap'
 // Default theme
 import '@splidejs/react-splide/dist/css/splide.min.css';
 
@@ -43,41 +43,49 @@ const Home = () => {
                   <div className="left-content header-text animate__animated animate__backInLeft" data-wow-duration="2s" data-wow-delay="2s">
                     <h3>WELCOME TO LUXPAL LAMPS PVT LTD</h3>
                     <h2>Smart Lighting<em> Solutions </em><span> for Electrical Vehicles</span></h2>
-                    {/* <p>LUXPAL LAMPS is a professional looking HTML template using a Bootstrap 5 (beta 2). This CSS template is free for you provided by <a rel="nofollow" href="https://templatemo.com/page/1" target="_parent">TemplateMo</a>.</p> */}
-                    {/* <form id="search" action="#" method="GET">
-                      <fieldset>
-                        <input type="address" name="address" className="email" placeholder="Your website URL..." autoComplete="on" required />
-                      </fieldset>
-                      <fieldset>
-                        <button type="submit" className="main-button">Analyze Site</button>
-                      </fieldset>
-                    </form> */}
                   </div>
                 </div>
-                <div className="col-lg-6">
-                <Splide aria-label="My Favorite Images"
-                options={OPTIONS}
-                >
-                  <SplideSlide>
-                    <img src={gifImage5} alt="Image 2"/>
-                  </SplideSlide>
-                  <SplideSlide>
-                    <img src={gifImage1} alt="Image 1"/>
-                  </SplideSlide>
-                  <SplideSlide>
-                    <img src={gifImage2} alt="Image 2"/>
-                  </SplideSlide>
-                  <SplideSlide>
-                    <img src={gifImage3} alt="Image 1"/>
-                  </SplideSlide>
-                  <SplideSlide>
-                    <img src={gifImage4} alt="Image 2"/>
-                  </SplideSlide>
-                </Splide>
+                <div className="col-lg-6 splideSlide">
+                  <Splide aria-label="My Favorite Images"
+                    options={OPTIONS}
+                  >
+                    <SplideSlide>
+                      <div className='ButtonSlide'>
+                        <h3>E-Bike</h3>
+                        <Button type='Button'> Know More</Button>
+                      </div>
+                      <img src={gifImage5} alt="Image 2" />
+                    </SplideSlide>
+                    <SplideSlide>
+                      <div className='ButtonSlide'>
+                        <h3>E-Bile</h3>
+                        <Button type='Button'> Know More</Button>
+                      </div>
 
-                  {/* <div className="right-image animate__animated animate__backInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                    <img src={bannerRight} alt="team meeting" />
-                  </div> */}
+                      <img src={gifImage1} alt="Image 1" />
+                    </SplideSlide>
+                    <SplideSlide>
+                      <div className='ButtonSlide'>
+                        <h3>E-Scooty</h3>
+                        <Button type='Button'> Know More</Button>
+                      </div>
+                      <img src={gifImage2} alt="Image 2" />
+                    </SplideSlide>
+                    <SplideSlide>
+                      <div className='ButtonSlide'>
+                        <h3>E-Rickshaw</h3>
+                        <Button type='Button'> Know More</Button>
+                      </div>
+                      <img src={gifImage3} alt="Image 1" />
+                    </SplideSlide>
+                    <SplideSlide>
+                      <div className='ButtonSlide'>
+                        <h3>E-Rickshaw</h3>
+                        <Button type='Button'> Know More</Button>
+                      </div>
+                      <img src={gifImage4} alt="Image 2" />
+                    </SplideSlide>
+                  </Splide>
                 </div>
               </div>
             </div>
@@ -89,11 +97,11 @@ const Home = () => {
       <div id="about" className="about-us section">
         <div className="container">
           <div className="row">
-            <h4>We are the Manufacturers of ICAT approved LED and Conventional lights for Electric Vehicles. 
-              Backed by more than 4 decades of experience in the Automotive Lighting Industry, 
-              we work as a Lighting Consultant for the Electric Vehicle Manufacturers and fulfill all the 
+            <h4>We are the Manufacturers of ICAT approved LED and Conventional lights for Electric Vehicles.
+              Backed by more than 4 decades of experience in the Automotive Lighting Industry,
+              we work as a Lighting Consultant for the Electric Vehicle Manufacturers and fulfill all the
               lighting requirements from the scratch, right from designing and developing the lights as per the requirement
-              to Tool Development and then ultimately manufacturing the finished product at our ICAT Approved Plant. 
+              to Tool Development and then ultimately manufacturing the finished product at our ICAT Approved Plant.
               One can even opt from our wide gamut of ‘Off the shelf’ Lights.
             </h4>
           </div>
@@ -109,7 +117,7 @@ const Home = () => {
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-lg-4 col-sm-6">
               <a href="#">
                 <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
                   <div class="hidden-content">
@@ -122,7 +130,7 @@ const Home = () => {
                 </div>
               </a>
             </div>
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-lg-4 col-sm-6">
               <a href="#">
                 <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
                   <div class="hidden-content">
@@ -135,7 +143,7 @@ const Home = () => {
                 </div>
               </a>
             </div>
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-lg-4 col-sm-6">
               <a href="#">
                 <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
                   <div class="hidden-content">
@@ -148,7 +156,7 @@ const Home = () => {
                 </div>
               </a>
             </div>
-            <a className='readMore' href='/products' onClick={changeProductHandler}>Read More</a>
+           <div> <a className='readMore' href='/products' onClick={changeProductHandler}>Read More</a></div>
           </div>
         </div>
       </div>
@@ -233,12 +241,12 @@ const Home = () => {
                 <h2>Feel Free To Send Us a Message About Your Website Needs</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doer ket eismod tempor incididunt ut labore et dolores</p>
                 <div class="phone-info">
-                  <h4>For any enquiry, Call Us: 91+ 8302298066</h4>
+                  <h4>For any enquiry, Call Us: +91 9929900797</h4>
                 </div>
               </div>
             </div>
             <div id="contact" class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
-              <ContactUs/>
+              <ContactUs />
             </div>
           </div>
         </div>

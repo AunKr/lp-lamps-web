@@ -175,12 +175,34 @@ Banner Style
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 100px 0px 120px 0px;
+  padding: 100px 0px 0px 0px;
   position: relative;
   overflow: hidden;
 }
 .main-banner img{
   width: 100%;
+}
+.main-banner .splideSlide img{
+  height: 95%;
+}
+.main-banner .splideSlide .ButtonSlide {
+  position: absolute;
+  bottom: 10rem;
+  left: 2rem;
+  color: #fff;
+}
+.main-banner .splideSlide .ButtonSlide button {
+  background: red;
+  border: 0;
+}
+.main-banner .splideSlide .ButtonSlide button:hover {
+  background: #efae33;
+}
+.main-banner .splideSlide .ButtonSlide button:focus {
+  box-shadow: inherit;
+}
+.main-banner .splideSlide .splide__pagination{
+  bottom: 3.5em;
 }
 
 .main-banner:after {
@@ -286,15 +308,20 @@ About Us Style
 */
 
 #about {
-  margin-top: 120px;
+  margin-top:20px;
 }
 
 .about-us {
   background-image: url(../../assets/images/about-bg.png);
   background-repeat: no-repeat;
-  background-position: center center;
   background-size: cover;
-  padding: 140px 0px 120px 0px;
+  padding: 184px 0 241px 0px;
+}
+.about-us h4{
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  line-height: 40px;
 }
 
 .about-us .left-image {
@@ -421,7 +448,7 @@ Portfolio
 */
 
 .our-portfolio {
-  padding-top: 120px;
+  padding-top:50px;
   margin-top: 0px;
 }
 
@@ -527,8 +554,8 @@ Blog
 
 .our-blog {
   position: relative;
-  margin-top: 80px;
-  padding-top: 120px;
+  margin-top: 100px;
+  padding-top:20px;
 }
 
 .our-blog .section-heading h2 {
@@ -648,6 +675,7 @@ contact
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  margin-bottom: 5rem;
 }
 
 .contact-us .section-heading h2,

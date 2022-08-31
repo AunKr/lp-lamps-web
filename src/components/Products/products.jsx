@@ -113,7 +113,7 @@ const Products = () => {
                             className="add-icon"
                             onClick={() => openModal(val)}
                           >
-                           <Button>View Details</Button>
+                           <Button>View</Button>
                           </div>
                           {/* <a href="" className="details-link">
                             <svg
