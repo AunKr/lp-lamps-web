@@ -39,7 +39,7 @@ if (cluster.isMaster) {
   app.use(cors());
 
   // load all routes
-  app.get('/images/*', express.static(path.join(__dirname + '/images')))
+  app.use('/images', express.static(path.join(__dirname + '/images')))
   app.use("/auth", userRoute);
   app.use("/product", productRoutes);
 

@@ -105,7 +105,7 @@ const Products = () => {
                         className="col-lg-3 col-md-6 portfolio-item"
                         key={val.image.toString()}
                       >
-                        <img src={val.image} alt="reporting" />
+                        <img src={val.image.indexOf('/') === 0 ? val.image : `/${val.image}`} alt="reporting" />
                         <div className="portfolio-info">
                           <h4>{val.name}</h4>
                           <p>{val.description}</p>
