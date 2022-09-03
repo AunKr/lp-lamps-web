@@ -1,3 +1,3 @@
 export const constants = {
-    API_URL: 'http://localhost:4500/'
+    API_URL: 'https://luxpallamps.herokuapp.com/'
 }
