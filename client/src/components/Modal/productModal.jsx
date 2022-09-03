@@ -68,7 +68,7 @@ const ProductModal = (props) => {
               formData.append("description", values.description);
               formData.append("image", values.file);
               const res = await axios.post(
-                "http://localhost:4500/product/create",
+                "https://luxpallamps.herokuapp.com/product/create",
                 formData,
                 { headers: { Authorization: `Bearer ${session?.token}` } }
               );
