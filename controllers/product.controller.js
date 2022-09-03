@@ -26,7 +26,7 @@ exports.productCreate = async (req, res) => {
         console.log("filePath==>", filePath);
         const filepathArray = filePath.split('/')
         console.log("filepathArray==??????????????>", filepathArray);
-        const path = `${filepathArray[filepathArray.length-2]}\\${filepathArray[filepathArray.length-1]}`
+        const path = `${filepathArray[filepathArray.length-2]}/${filepathArray[filepathArray.length-1]}`
         let data = {
             name: req.body.name,
             category: req.body.category,
