@@ -1,8 +1,12 @@
 module.exports = {
-    HOST: 'localhost',
-    USER: 'root',
-    PASSWORD: 'root',
-    DB: 'luxpal',
+    // HOST: 'localhost',
+    // USER: 'root',
+    // PASSWORD: 'root',
+    // DB: 'luxpal',
+    HOST: 'sql6.freemysqlhosting.net',
+    USER: 'sql6516969',
+    PASSWORD: 'hU9G3iJ3Mi',
+    DB: 'sql6516969',
     dialect: 'mysql',
 
     pool: {
