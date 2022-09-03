@@ -39,6 +39,7 @@ if (cluster.isMaster) {
   app.use(cors());
 
   // load all routes
+  app.get('/images/*', express.static(path.join(__dirname + '/images')))
   app.use("/auth", userRoute);
   app.use("/product", productRoutes);
 
@@ -52,12 +53,10 @@ if (cluster.isMaster) {
     console.log("UNHANDLED_REJECTION", error);
   });
 
-  if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
-    app.use(express.static('client/build'));
-    app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/client/build/index.html'));
-    });
-   }
+  app.use(express.static('client/build'));
+  app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/client/build/index.html'));
+  });
 
   // Start the Server
   server.listen(port, function () {
