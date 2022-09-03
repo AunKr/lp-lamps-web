@@ -7,7 +7,7 @@ const service = require('../shared/service.response.js')
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         console.log("__dirname", __dirname);
-        cb(null, path.join(__dirname,"../client/public/ProductImages"))
+        cb(null, path.join(__dirname,"../images"))
     },
     filename: (req, file, cb)=> {
         cb(null,file.originalname)
