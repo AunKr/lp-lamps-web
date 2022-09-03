@@ -24,7 +24,7 @@ exports.productCreate = async (req, res) => {
     try {
         const filePath = req.file?.path.replace(/\\/g, ' ')
         console.log("filePath==>", filePath);
-        const filepathArray = filePath.split(' ')
+        const filepathArray = filePath.split('/')
         console.log("filepathArray==??????????????>", filepathArray);
         const path = `${filepathArray[filepathArray.length-2]}\\${filepathArray[filepathArray.length-1]}`
         let data = {
