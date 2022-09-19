@@ -189,7 +189,7 @@ Banner Style
 }
 .main-banner .splideSlide .ButtonSlide {
   position: absolute;
-  bottom: 10rem;
+  bottom: 3rem;
   left: 2rem;
   color: #fff;
 }
@@ -530,6 +530,10 @@ Portfolio
 .our-portfolio .showed-content img {
   max-width: 100px;
 }
+.readMoreButton{
+  display: flex;
+
+}
 .our-portfolio.section a.readMore{
   display: inline-block;
     background-color: #03a4ed;
@@ -547,6 +551,7 @@ Portfolio
   background-color: #fe3f40;
     color: #fff;
 }
+
 
 /* 
 ---------------------------------------------
@@ -593,7 +598,7 @@ Blog
   border-radius: 20px;
   margin-right: 75px;
   position: absolute;
-  margin-top: -100px;
+  margin-top: -30px;
   padding: 30px;
 }
 
@@ -636,6 +641,7 @@ Blog
 
 .our-blog .right-list .left-content {
   margin-right: 45px;
+  min-width: 50%;
 }
 
 .our-blog .right-list .left-content span {
@@ -661,7 +667,23 @@ Blog
 .our-blog .right-list .right-image img {
   width: 250px;
   border-radius: 20px;
+  position: relative;
 }
+.our-blog .right-list .right-image{
+  position: relative;
+  cursor: pointer;
+}
+
+.our-blog .right-list .right-image:after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #ff000099;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 
 
 

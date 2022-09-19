@@ -29,7 +29,7 @@ const Header = () => {
                         <nav className="main-nav">
 
                             <a href="/" className="logo">
-                                <img src={LogoImage1} alt=""/>
+                                <img className='logoIcon' src={LogoImage1} alt=""/>
                                 <img src={LogoImage2} alt=""/>
                             </a>
                             <ul className={`nav ${sideBar ? 'openSideBar' : ''}`} >
