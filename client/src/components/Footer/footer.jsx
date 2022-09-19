@@ -22,7 +22,7 @@ const Footer = () => {
             <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-check-fill" viewBox="0 0 16 16">
               <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 4.697v4.974A4.491 4.491 0 0 0 12.5 8a4.49 4.49 0 0 0-1.965.45l-.338-.207L16 4.697Z" />
               <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z" />
-            </svg> Email: info@luxpallamps.com</p>
+            </svg> Email: Letsconnect@luxpal.org</p>
             <ul class='social-media-icons'>
               <li>
                 <a href='#'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" /></svg></a>
@@ -36,11 +36,10 @@ const Footer = () => {
           </div>
           <div class="col-lg-6 col-sm-6 iframeMap">
             <h5>Office Loction</h5>
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3555.1319213870183!2d75.77161541436773!3d26.99437636306968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcbaf55f3b6cc9721!2sAlwar%20Lamps%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1662225040186!5m2!1sen!2sin" 
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113813.16175595939!2d75.71641590884673!3d26.945949838021242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db438daaaaaab%3A0x83cc18a652f19033!2sAlwar%20Lamps%20Private%20Limited!5e0!3m2!1sen!2sin!4v1662228906412!5m2!1sen!2sin" 
               width="600" 
               height="450" 
-              style={{border: 0}}
+              style={{border: 0, borderRadius: 2}}
               allowfullscreen="" 
               loading="lazy" 
               referrerpolicy="no-referrer-when-downgrade">

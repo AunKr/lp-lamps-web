@@ -52,14 +52,14 @@ const Home = () => {
                     <SplideSlide>
                       <div className='ButtonSlide'>
                         <h3>E-Bike</h3>
-                        <Button type='Button'> Know More</Button>
+                        <Button type='Button' onClick={changeProductHandler}> Know More</Button>
                       </div>
                       <img src={gifImage5} alt="Image 2" />
                     </SplideSlide>
                     <SplideSlide>
                       <div className='ButtonSlide'>
                         <h3>E-Bike</h3>
-                        <Button type='Button'> Know More</Button>
+                        <Button type='Button' onClick={changeProductHandler}> Know More</Button>
                       </div>
 
                       <img src={gifImage1} alt="Image 1" />
@@ -67,21 +67,21 @@ const Home = () => {
                     <SplideSlide>
                       <div className='ButtonSlide'>
                         <h3>E-Scooty</h3>
-                        <Button type='Button'> Know More</Button>
+                        <Button type='Button' onClick={changeProductHandler}> Know More</Button>
                       </div>
                       <img src={gifImage2} alt="Image 2" />
                     </SplideSlide>
                     <SplideSlide>
                       <div className='ButtonSlide'>
                         <h3>E-Rickshaw</h3>
-                        <Button type='Button'> Know More</Button>
+                        <Button type='Button' onClick={changeProductHandler}> Know More</Button>
                       </div>
                       <img src={gifImage3} alt="Image 1" />
                     </SplideSlide>
                     <SplideSlide>
                       <div className='ButtonSlide'>
                         <h3>E-Rickshaw</h3>
-                        <Button type='Button'> Know More</Button>
+                        <Button type='Button' onClick={changeProductHandler}> Know More</Button>
                       </div>
                       <img src={gifImage4} alt="Image 2" />
                     </SplideSlide>

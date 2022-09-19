@@ -2,6 +2,8 @@ import { Formik } from "formik";
 import React from "react";
 import './contactUs.css'
 import { useNavigate } from "react-router-dom";
+import { sendMail } from "../Login/login.service";
+import { toast } from "react-toastify";
 
 const ContactUs = () => {
   const navigate = useNavigate();
@@ -28,6 +30,15 @@ const ContactUs = () => {
       }}
       onSubmit={(values, { setSubmitting }) => {
         console.log("values", values);
+        sendMail(values)
+        .then(res => {
+          if(res.success){
+            toast.success(res?.data?.message,{
+                theme: 'colored'
+            })
+          }
+        })
+        .catch(err => console.log(err))
       }}
     >
       {({

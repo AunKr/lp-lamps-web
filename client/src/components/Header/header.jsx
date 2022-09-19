@@ -1,14 +1,25 @@
 import React, { useState } from 'react'
 import './header.css'
-import LogoImage from '../../assets/images/logo.png'
+import LogoImage1 from '../../assets/images/logo1.png'
+import LogoImage2 from '../../assets/images/logo2.png'
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
     const [sideBar, setSideBar] = useState(false)
+    const [activeBar, setActiveBar] = useState('home')
+    const navigate = useNavigate()
+
     const openSideBar = () => {
         setSideBar(true)
     }
     const closeSideBar = () => {
         setSideBar(false)
+    }
+    const handleHeading = (value) => {
+        setActiveBar(value)
+        if(value === 'portfolio'){
+            navigate('/products')
+        }
     }
     return (
         <div className='header-area header-sticky animate__animated animate__bounceInDown' data-wow-duration="0.75s" data-wow-delay="0s">
@@ -18,15 +29,16 @@ const Header = () => {
                         <nav className="main-nav">
 
                             <a href="/" className="logo">
-                                <img src={LogoImage} alt=""/>
+                                <img src={LogoImage1} alt=""/>
+                                <img src={LogoImage2} alt=""/>
                             </a>
                             <ul className={`nav ${sideBar ? 'openSideBar' : ''}`} >
                                 <li className="mobileShow"><a onClick={closeSideBar}>X</a></li>
-                                <li className="scroll-to-section"><a href="/#top" className="active">Home</a></li>
-                                <li className="scroll-to-section"><a href="/#about" className="">About Us</a></li>
-                                <li className="scroll-to-section hoverNav"><a href="/#portfolio">Products</a></li>
-                                <li className="scroll-to-section"><a href="/#blog">Blog</a></li>
-                                <li className="scroll-to-section"><div className="main-red-button"><a href="/#contact">Contact Us</a></div></li>
+                                <li className="scroll-to-section"><a href="/#top" className={activeBar === 'home' ? "active" : ''} onClick={() => handleHeading('home')}>Home</a></li>
+                                <li className="scroll-to-section"><a href="/#about" className={activeBar === 'about' ? "active" : ''} onClick={() => handleHeading('about')}>About Us</a></li>
+                                <li className="scroll-to-section hoverNav"><a href="" className={activeBar === 'portfolio' ? "active" : ''} onClick={() => handleHeading('portfolio')}>Products</a></li>
+                                <li className="scroll-to-section"><a href="/#blog" className={activeBar === 'blog' ? "active" : ''} onClick={() => handleHeading('blog')}>Blog</a></li>
+                                <li className="scroll-to-section"><div className="main-red-button"><a href="/#contact" className={activeBar === 'contact' ? "active" : ''} onClick={() => handleHeading('contact')}>Contact Us</a></div></li>
                             </ul>
                             <a className="menu-trigger" onClick={openSideBar}>
                                 <span>Menu</span>

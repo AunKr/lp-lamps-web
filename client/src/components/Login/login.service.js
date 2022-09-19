@@ -21,3 +21,14 @@ export function register(data) {
       return error.response.data
     })
 }
+
+export async function sendMail(data) {
+  return await httpservice()
+    .post('/auth/enquiry', data)
+    .then(function (response) {
+      return response.data
+    })
+    .catch(function (error) {
+      return error.response.data
+    })
+}
