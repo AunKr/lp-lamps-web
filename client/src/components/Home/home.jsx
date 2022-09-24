@@ -9,6 +9,8 @@ import gifImage5 from '../../assets/slider5.gif'
 import portfolioImage from '../../assets/images/portfolio-image.png'
 import blogDec from '../../assets/images/blog-dec.png'
 import blogThumb from '../../assets/images/blog-thumb-01.jpg'
+import blogThumb2 from '../../assets/images/blog-thumb-02.jpg'
+import blogThumb3 from '../../assets/images/blog-thumb-03.jpg'
 import bigblogthumb from '../../assets/images/big-blog-thumb.jpg'
 import Header from '../Header/header'
 import Footer from '../Footer/footer'
@@ -121,8 +123,7 @@ const Home = () => {
               <a href="#">
                 <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
                   <div class="hidden-content">
-                    <h4>SEO Analysis</h4>
-                    <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
+                    <h4>Electric Bike Lights</h4>
                   </div>
                   <div class="showed-content">
                     <img src={portfolioImage} alt="" />
@@ -134,8 +135,7 @@ const Home = () => {
               <a href="#">
                 <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
                   <div class="hidden-content">
-                    <h4>Performance Tests</h4>
-                    <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
+                  <h4>Electric Scooter Lights</h4>
                   </div>
                   <div class="showed-content">
                     <img src={portfolioImage} alt="" />
@@ -146,9 +146,8 @@ const Home = () => {
             <div class="col-lg-4 col-sm-6">
               <a href="#">
                 <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-                  <div class="hidden-content">
-                    <h4>Data Analysis</h4>
-                    <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
+                  <div class="hidden-content">                    
+                  <h4>Electric Rickshaw Lights</h4>
                   </div>
                   <div class="showed-content">
                     <img src={portfolioImage} alt="" />
@@ -156,7 +155,7 @@ const Home = () => {
                 </div>
               </a>
             </div>
-           <div> <a className='readMore' href='/products' onClick={changeProductHandler}>Read More</a></div>
+           <div className='readMoreButton'> <a className='readMore' href='/products' onClick={changeProductHandler}>Read More</a></div>
           </div>
         </div>
       </div>
@@ -185,8 +184,7 @@ const Home = () => {
                       <li><i class="fa fa-users"></i> TemplateMo</li>
                       <li><i class="fa fa-folder"></i> Branding</li>
                     </ul>
-                    <a href="#"><h4>SEO Agency &amp; Digital Marketing</h4></a>
-                    <p>Lorem ipsum dolor sit amet, consectetur and sed doer ket eismod tempor incididunt ut labore et dolore magna...</p>
+                    <a href="#"><h4>EV Policies in India</h4></a>
                     <div class="main-blue-button">
                       <a href="/blog">Read More</a>
                     </div>
@@ -200,8 +198,7 @@ const Home = () => {
                   <li>
                     <div class="left-content align-self-center">
                       <span><i class="fa fa-calendar"></i> 18 Mar 2021</span>
-                      <a href="#"><h4>New Websites &amp; Backlinks</h4></a>
-                      <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
+                      <a href="#"><h4>Sequential Indicator Lights</h4></a>
                     </div>
                     <div class="right-image">
                       <a href="#"><img src={blogThumb} alt="" /></a>
@@ -210,21 +207,19 @@ const Home = () => {
                   <li>
                     <div class="left-content align-self-center">
                       <span><i class="fa fa-calendar"></i> 14 Mar 2021</span>
-                      <a href="#"><h4>SEO Analysis &amp; Content Ideas</h4></a>
-                      <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
+                      <a href="#"><h4>Eagle Head Light</h4></a>
                     </div>
                     <div class="right-image">
-                      <a href="#"><img src={blogThumb} alt="" /></a>
+                      <a href="#"><img src={blogThumb2} alt="" /></a>
                     </div>
                   </li>
                   <li>
                     <div class="left-content align-self-center">
                       <span><i class="fa fa-calendar"></i> 06 Mar 2021</span>
-                      <a href="#"><h4>SEO Tips &amp; Digital Marketing</h4></a>
-                      <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
+                      <a href="#"><h4>Coming soon...</h4></a>
                     </div>
                     <div class="right-image">
-                      <a href="#"><img src={blogThumb} alt="" /></a>
+                      <a href="#"><img src={blogThumb3} alt="" /></a>
                     </div>
                   </li>
                 </ul>
@@ -239,7 +234,6 @@ const Home = () => {
             <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.25s">
               <div class="section-heading">
                 <h2>Feel Free To Send Us a Message About Your Website Needs</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doer ket eismod tempor incididunt ut labore et dolores</p>
                 <div class="phone-info">
                   <h4>For any enquiry, Call Us: +91 9929900797</h4>
                 </div>

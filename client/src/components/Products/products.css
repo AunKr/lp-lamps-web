@@ -104,7 +104,8 @@
     float: left;
     width: 100%;
     padding: 5px 0;
-    margin-bottom: 13px;
+    margin-bottom: 13px;    
+    cursor: pointer;
 }
 .productsCategories ul li span img {
     width: 100%;

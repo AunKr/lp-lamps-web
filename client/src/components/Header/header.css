@@ -44,7 +44,7 @@ header
   }
   
   .header-area .main-nav {
-    min-height: 80px;
+    min-height: 60px;
     background: transparent;
   }
   
@@ -62,8 +62,13 @@ header
     transition: all 0.3s ease 0s;
   }
   .header-area .main-nav .logo img {
-    width: 100px;
+    width: 130px;
 }
+.header-area .main-nav .logo .logoIcon{
+  width: 50px;
+  margin-right: 5px;
+}
+
   
   .header-area .main-nav .logo h4 {
       font-size: 24px;
