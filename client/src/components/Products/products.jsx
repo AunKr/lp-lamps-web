@@ -19,6 +19,7 @@ const Products = () => {
   const [indicatorLightData, setIndicatorLightData] = useState([]);
   const [tailLightData, setTailLightData] = useState([]);
   const [categoryChanged, setCategoryChanged] = useState(false);
+  const driveUrl = 'https://drive.google.com/uc?id=';
 
   useEffect(() => {
     getProducts()
@@ -105,7 +106,7 @@ const Products = () => {
                         className="col-lg-3 col-md-6 portfolio-item"
                         key={val?.image}
                       >
-                        <img src={val?.image} alt="reporting" />
+                        <img src={`${driveUrl}${val?.driveId}`} alt="reporting" />
                         <div className="portfolio-info">
                           <h4>{val.name}</h4>
                           <p>{val.description}</p>

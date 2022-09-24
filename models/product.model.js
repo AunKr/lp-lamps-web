@@ -18,9 +18,15 @@ module.exports = (sequelize, DataTypes) => {
         description: {
             type: DataTypes.TEXT
         },
-        image: {
+        imageName: {
             type: DataTypes.STRING
         },
+        driveId: {
+            type: DataTypes.STRING
+        },
+        type: {
+            type: DataTypes.STRING
+        }
     
     })
     return Product
