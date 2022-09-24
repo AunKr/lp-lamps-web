@@ -58,7 +58,7 @@ const Products = () => {
       )}
       <Header />
       <div className="container-fluid">
-        <div className="row">
+        <div className="row marginBottomAdd">
           <h1 className="topTitle">Our Products</h1>
           <p className="text-center mb-10">
             Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter
@@ -80,7 +80,7 @@ const Products = () => {
                 <a onClick={() => handleCategoryChange("scooty")}>
                   {" "}
                   <span>
-                  <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-1om0hkc" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="MopedOutlinedIcon"><path d="M19 7c0-1.1-.9-2-2-2h-3v2h3v2.65L13.52 14H10V9H6c-2.21 0-4 1.79-4 4v3h2c0 1.66 1.34 3 3 3s3-1.34 3-3h4.48L19 10.35V7zM4 14v-1c0-1.1.9-2 2-2h2v3H4zm3 3c-.55 0-1-.45-1-1h2c0 .55-.45 1-1 1z"></path><path d="M5 6h5v2H5zm14 7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm0 4c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"></path></svg>
+                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-1om0hkc" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="MopedOutlinedIcon"><path d="M19 7c0-1.1-.9-2-2-2h-3v2h3v2.65L13.52 14H10V9H6c-2.21 0-4 1.79-4 4v3h2c0 1.66 1.34 3 3 3s3-1.34 3-3h4.48L19 10.35V7zM4 14v-1c0-1.1.9-2 2-2h2v3H4zm3 3c-.55 0-1-.45-1-1h2c0 .55-.45 1-1 1z"></path><path d="M5 6h5v2H5zm14 7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm0 4c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"></path></svg>
                   </span>
                   E-Scooty
                 </a>
@@ -89,7 +89,7 @@ const Products = () => {
                 <a onClick={() => handleCategoryChange("rickshaw")}>
                   {" "}
                   <span>
-                  <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-1om0hkc" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ElectricRickshawIcon"><path d="M21 11.18V9.72c0-.47-.16-.92-.46-1.28L16.6 3.72c-.38-.46-.94-.72-1.54-.72H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h.18C3.6 16.16 4.7 17 6 17s2.4-.84 2.82-2h8.37c.41 1.16 1.51 2 2.82 2 1.66 0 3-1.34 3-3-.01-1.3-.85-2.4-2.01-2.82zM18.4 9H16V6.12L18.4 9zM3 5h4v4H3V5zm3 10c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm3-2v-2h3V9H9V5h5v8H9zm11 2c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zM7 20h4v-2l6 3h-4v2z"></path></svg>
+                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-1om0hkc" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ElectricRickshawIcon"><path d="M21 11.18V9.72c0-.47-.16-.92-.46-1.28L16.6 3.72c-.38-.46-.94-.72-1.54-.72H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h.18C3.6 16.16 4.7 17 6 17s2.4-.84 2.82-2h8.37c.41 1.16 1.51 2 2.82 2 1.66 0 3-1.34 3-3-.01-1.3-.85-2.4-2.01-2.82zM18.4 9H16V6.12L18.4 9zM3 5h4v4H3V5zm3 10c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm3-2v-2h3V9H9V5h5v8H9zm11 2c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zM7 20h4v-2l6 3h-4v2z"></path></svg>
                   </span>
                   E-Rickshaw
                 </a>
@@ -101,32 +101,25 @@ const Products = () => {
               <h1 className="productsTitle">Head Light</h1>
               {headLightData && headLightData.length
                 ? headLightData.map((val) => {
-                    return (
-                      <div
-                        className="col-lg-3 col-md-6 portfolio-item"
-                        key={val?.id}
-                      >
-                        <img src={`${driveUrl}${val?.driveId}`} alt="reporting" />
-                        <div className="portfolio-info">
-                          <h4>{val.name}</h4>
-                          <p>{val.description}</p>
-                          <div
-                            className="add-icon"
-                            onClick={() => openModal(val)}
-                          >
-                           <Button>View</Button>
-                          </div>
-                          {/* <a href="" className="details-link">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="24"
-                              height="24"
-                            >
-                              <path d="M8.465 11.293c1.133-1.133 3.109-1.133 4.242 0l.707.707 1.414-1.414-.707-.707c-.943-.944-2.199-1.465-3.535-1.465s-2.592.521-3.535 1.465L4.929 12a5.008 5.008 0 0 0 0 7.071 4.983 4.983 0 0 0 3.535 1.462A4.982 4.982 0 0 0 12 19.071l.707-.707-1.414-1.414-.707.707a3.007 3.007 0 0 1-4.243 0 3.005 3.005 0 0 1 0-4.243l2.122-2.121z" />
-                              <path d="m12 4.929-.707.707 1.414 1.414.707-.707a3.007 3.007 0 0 1 4.243 0 3.005 3.005 0 0 1 0 4.243l-2.122 2.121c-1.133 1.133-3.109 1.133-4.242 0L10.586 12l-1.414 1.414.707.707c.943.944 2.199 1.465 3.535 1.465s2.592-.521 3.535-1.465L19.071 12a5.008 5.008 0 0 0 0-7.071 5.006 5.006 0 0 0-7.071 0z" />
-                            </svg>
-                          </a> */}
+                  return (
+                    <div
+                      className="col-lg-3 col-md-6 portfolio-item"
+                      key={val?.id}
+                    >
+                    <div className="portfolio-itemDiv">
+                      <p>Loading...</p>
+                    <img src={`${driveUrl}${val?.driveId}`} alt="reporting" />
+                      <div className="portfolio-info">
+                        <h4>{val.name}</h4>
+                        <p>{val.description}</p>
+                        <div
+                          className="add-icon"
+                          onClick={() => openModal(val)}
+                        >
+                          <Button>View</Button>
+                        </div>
                       </div>
+                    </div>
                     </div>
                   );
                 })
@@ -141,6 +134,8 @@ const Products = () => {
                       className="col-lg-3 col-md-6 portfolio-item"
                       key={val?.id}
                     >
+                       <div className="portfolio-itemDiv">
+                      <p>Loading...</p>
                       <img src={`${driveUrl}${val?.driveId}`} alt="reporting" />
                       <div className="portfolio-info">
                         <h4>{val.name}</h4>
@@ -168,10 +163,11 @@ const Products = () => {
                           </svg>
                         </a>
                       </div>
+                      </div>                      
                     </div>
                   );
                 })
-                : <p>Coming Soon...</p>}
+                : <p className="comingSoon">Coming Soon...</p>}
             </div>
             <div className="row">
               <h1 className="productsTitle">Tail Light</h1>

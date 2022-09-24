@@ -43,7 +43,7 @@ const Home = () => {
               <div className="row">
                 <div className="col-lg-6 align-self-center">
                   <div className="left-content header-text animate__animated animate__backInLeft" data-wow-duration="2s" data-wow-delay="2s">
-                    <h3>WELCOME TO LUXPAL LAMPS PVT LTD</h3>
+                    <h3>Welcome to Luxpal Lamps Pvt Ltd </h3>
                     <h2>Smart Lighting<em> Solutions </em><span> for Electrical Vehicles</span></h2>
                   </div>
                 </div>

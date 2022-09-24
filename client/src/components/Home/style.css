@@ -239,17 +239,22 @@ Banner Style
   color: #fe3f40;
   margin-bottom: 15px;
 }
-
+.main-banner .left-content h3{
+  text-shadow: 2px 2px #eae7e7;
+}
 .main-banner .left-content h2 {
   font-size: 50px;
   font-weight: 700;
   color: #2a2a2a;
   line-height: 72px;
+  font-style: italic;
+  text-shadow: 2px 2px #d4d4d4;
 }
 
 .main-banner .left-content h2 em {
-  color: #03a4ed;
+  color: #fad02c;
   font-style: normal;
+  text-shadow: initial;
 }
 
 .main-banner .left-content h2 span {
