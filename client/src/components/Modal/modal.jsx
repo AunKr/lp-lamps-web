@@ -1,9 +1,9 @@
 import React from "react";
 import { Modal, Button } from "react-bootstrap";
 import './modal.css'
-import portfolio1 from '../../assets/images/portfolio-1.jpg'
 
 const ConfirmationModal = (props) => {
+  const driveUrl = 'https://drive.google.com/uc?id=';
   return (
     <Modal show={props.open} onHide={props.handleClose} className='add-products'>
       <Modal.Header closeButton>
@@ -13,7 +13,7 @@ const ConfirmationModal = (props) => {
       <Modal.Body>
         <div className="full-size">
           <div className="images-section">
-            <img src={props?.product?.image} alt="reporting" />
+            <img src={`${driveUrl}${props?.product?.driveId}`} alt="reporting" />
           </div>
           <div className="title-section">
             <h3>Product information</h3>

@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './header.css'
 import LogoImage1 from '../../assets/images/logo1.png'
 import LogoImage2 from '../../assets/images/logo2.png'
 import { useNavigate } from 'react-router-dom'
+import { AuthContext } from '../AuthContextProvider/authContextProvider'
 
 const Header = () => {
     const [sideBar, setSideBar] = useState(false)
-    const [activeBar, setActiveBar] = useState('home')
+    const { activeBar, setActiveBar } = useContext(AuthContext);
     const navigate = useNavigate()
 
     const openSideBar = () => {
@@ -17,6 +18,10 @@ const Header = () => {
     }
     const handleHeading = (value) => {
         setActiveBar(value)
+        localStorage.setItem(
+            "activeBar",
+            JSON.stringify(value)
+        );
         if(value === 'portfolio'){
             navigate('/products')
         }

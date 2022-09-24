@@ -104,7 +104,7 @@ const Products = () => {
                     return (
                       <div
                         className="col-lg-3 col-md-6 portfolio-item"
-                        key={val?.image}
+                        key={val?.id}
                       >
                         <img src={`${driveUrl}${val?.driveId}`} alt="reporting" />
                         <div className="portfolio-info">
@@ -135,19 +135,19 @@ const Products = () => {
             <div className="row">
               <h1 className="productsTitle">Indicator Light</h1>
               {indicatorLightData && indicatorLightData.length
-                ? indicatorLightData.map((bike) => {
+                ? indicatorLightData.map((val) => {
                   return (
                     <div
                       className="col-lg-3 col-md-6 portfolio-item"
-                      key={bike.image.toString()}
+                      key={val?.id}
                     >
-                      <img src={bike.image} alt="reporting" />
+                      <img src={`${driveUrl}${val?.driveId}`} alt="reporting" />
                       <div className="portfolio-info">
-                        <h4>{bike.name}</h4>
-                        <p>{bike.description}</p>
+                        <h4>{val.name}</h4>
+                        <p>{val.description}</p>
                         <div
                           className="add-icon"
-                          onClick={() => openModal(bike)}
+                          onClick={() => openModal(val)}
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -171,24 +171,24 @@ const Products = () => {
                     </div>
                   );
                 })
-                : null}
+                : <p>Coming Soon...</p>}
             </div>
             <div className="row">
               <h1 className="productsTitle">Tail Light</h1>
               {tailLightData && tailLightData.length
-                ? tailLightData.map((bike) => {
+                ? tailLightData.map((val) => {
                   return (
                     <div
                       className="col-lg-3 col-md-6 portfolio-item"
-                      key={bike.image.toString()}
+                      key={val?.id}
                     >
-                      <img src={bike.image} alt="reporting" />
+                      <img src={`${driveUrl}${val?.driveId}`} alt="reporting" />
                       <div className="portfolio-info">
-                        <h4>{bike.name}</h4>
-                        <p>{bike.description}</p>
+                        <h4>{val.name}</h4>
+                        <p>{val.description}</p>
                         <div
                           className="add-icon"
-                          onClick={() => openModal(bike)}
+                          onClick={() => openModal(val)}
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -212,7 +212,7 @@ const Products = () => {
                     </div>
                   );
                 })
-                : null}
+                : <p>Coming Soon...</p>}
             </div>
           </div>
         </div>
