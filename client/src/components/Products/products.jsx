@@ -59,10 +59,6 @@ const Products = () => {
       <div className="container-fluid">
         <div className="row marginBottomAdd">
           <h1 className="topTitle">Our Products</h1>
-          <p className="text-center mb-10">
-            Lorem ipsum dolor sit amet, ctetur aoi adipiscing eliter
-          </p>
-
           <div className="col-lg-2 productsCategories">
             <h2>Products Categories</h2>
             <ul>
