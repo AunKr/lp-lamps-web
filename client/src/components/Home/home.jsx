@@ -9,8 +9,8 @@ import gifImage5 from '../../assets/slider5.gif'
 import portfolioImage from '../../assets/images/portfolio-image.png'
 import blogDec from '../../assets/images/blog-dec.png'
 import blogThumb from '../../assets/images/blog-thumb-01.jpg'
-import blogThumb2 from '../../assets/images/blog-thumb-02.jpg'
-import blogThumb3 from '../../assets/images/blog-thumb-03.jpg'
+import blogThumb2 from '../../assets/images/blogImg2.webp'
+import blogThumb3 from '../../assets/images/blockImg3.png'
 import bigblogthumb from '../../assets/images/big-blog-thumb.jpg'
 import Header from '../Header/header'
 import Footer from '../Footer/footer'
@@ -176,15 +176,13 @@ const Home = () => {
           <div class="row">
             <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
               <div class="left-image">
-                <a href="#"><img src={bigblogthumb} alt="Workspace Desktop" /></a>
+                <a href="https://www.linkedin.com/pulse/scope-electric-vehicles-india-luxpalbulbs/?trackingId=ZDTra32GTxllyNBMIjswmQ%3D%3D"><img src={blogThumb3} alt="Workspace Desktop" /></a>
                 <div class="info">
                   <div class="inner-content">
                     <ul>
-                      <li><i class="fa fa-calendar"></i> 24 Mar 2021</li>
-                      <li><i class="fa fa-users"></i> TemplateMo</li>
-                      <li><i class="fa fa-folder"></i> Branding</li>
+                      <li><i class="fa fa-calendar"></i> 25 Aug 2022</li>
                     </ul>
-                    <a href="#"><h4>EV Policies in India</h4></a>
+                    <a href="https://www.linkedin.com/pulse/scope-electric-vehicles-india-luxpalbulbs/?trackingId=ZDTra32GTxllyNBMIjswmQ%3D%3D"><h4>Scope of Electric Vehicles in India</h4></a>
                     <div class="main-blue-button">
                       <a href="/blog">Read More</a>
                     </div>
@@ -197,29 +195,20 @@ const Home = () => {
                 <ul>
                   <li>
                     <div class="left-content align-self-center">
-                      <span><i class="fa fa-calendar"></i> 18 Mar 2021</span>
-                      <a href="#"><h4>Sequential Indicator Lights</h4></a>
+                      <span><i class="fa fa-calendar"></i> 20 Sep 2022</span>
+                      <a href="https://www.linkedin.com/pulse/transitions-evs-luxpalbulbs/?trackingId=0Vo0KMLe2ACNW7PxqsfBPQ%3D%3D"><h4>The Transitions of EVs</h4></a>
                     </div>
                     <div class="right-image">
-                      <a href="#"><img src={blogThumb} alt="" /></a>
+                      <a href="https://www.linkedin.com/pulse/transitions-evs-luxpalbulbs/?trackingId=0Vo0KMLe2ACNW7PxqsfBPQ%3D%3D"><img src={blogThumb2} alt="" /></a>
                     </div>
                   </li>
                   <li>
                     <div class="left-content align-self-center">
-                      <span><i class="fa fa-calendar"></i> 14 Mar 2021</span>
-                      <a href="#"><h4>Eagle Head Light</h4></a>
+                      <span><i class="fa fa-calendar"></i> 13 Sep 2022</span>
+                      <a href="https://www.linkedin.com/pulse/ev-policies-india-luxpalbulbs/?trackingId=g3%2BGUxSezDzbzJfky6SxrA%3D%3D"><h4>EV Policies in India</h4></a>
                     </div>
                     <div class="right-image">
-                      <a href="#"><img src={blogThumb2} alt="" /></a>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="left-content align-self-center">
-                      <span><i class="fa fa-calendar"></i> 06 Mar 2021</span>
-                      <a href="#"><h4>Coming soon...</h4></a>
-                    </div>
-                    <div class="right-image">
-                      <a href="#"><img src={blogThumb3} alt="" /></a>
+                      <a href="https://www.linkedin.com/pulse/ev-policies-india-luxpalbulbs/?trackingId=g3%2BGUxSezDzbzJfky6SxrA%3D%3D"><img src={bigblogthumb} alt="" /></a>
                     </div>
                   </li>
                 </ul>
