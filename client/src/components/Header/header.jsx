@@ -33,7 +33,7 @@ const Header = () => {
                     <div className="col-12">
                         <nav className="main-nav">
 
-                            <a href="/" className="logo">
+                            <a href="/" className="logo" onClick={() => handleHeading('home')}>
                                 <img className='logoIcon' src={LogoImage1} alt=""/>
                                 <img src={LogoImage2} alt=""/>
                             </a>
