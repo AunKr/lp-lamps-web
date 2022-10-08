@@ -22,10 +22,14 @@ exports.upload = multer({
 }).single("image");
 
 exports.productCreate = async (req, res) => {
+console.log('productCreate :');
   try {
     const filePath = req.file?.path.replace(/\\/g, " ");
+    console.log('filePath :', filePath);
     const filepathArray = filePath.split(" ");
+    console.log('filepathArray :', filepathArray);
     const imagePath = `${filepathArray[filepathArray.length - 1]}`;
+    console.log('imagePath :',  path.join(__dirname, `../images/${imagePath}`));
     const creds_service_user = require(PATH_TO_CREDENTIALS);
     const googleDriveInstance = new NodeGoogleDrive({
       ROOT_FOLDER: YOUR_ROOT_FOLDER,
@@ -35,8 +39,9 @@ exports.productCreate = async (req, res) => {
     let uploadedFile = await googleDriveInstance.writeFile(
       path.join(__dirname, `../images/${imagePath}`),
       YOUR_ROOT_FOLDER
-    );
-
+      );
+      
+      console.log('uploadedFile :', uploadedFile);
     const data = {
       name: req.body.name,
       category: req.body.category,
@@ -46,6 +51,7 @@ exports.productCreate = async (req, res) => {
       imageName: uploadedFile.name,
       type: uploadedFile.mimeType,
     };
+    console.log('data :', data);
     const response = await Product.create(data);
     if (response) {
       const data = {

@@ -68,7 +68,7 @@ const Home = () => {
                     </SplideSlide>
                     <SplideSlide>
                       <div className='ButtonSlide'>
-                        <h3>E-Scooty</h3>
+                        <h3>E-Scooter</h3>
                         <Button type='Button' onClick={changeProductHandler}> Know More</Button>
                       </div>
                       <img src={gifImage2} alt="Image 2" />

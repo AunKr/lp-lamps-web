@@ -29,7 +29,6 @@ const ContactUs = () => {
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {
-        console.log("values", values);
         sendMail(values)
         .then(res => {
           if(res.success){

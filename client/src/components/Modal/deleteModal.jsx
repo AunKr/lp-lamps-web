@@ -5,7 +5,6 @@ import { Modal, Button } from "react-bootstrap";
 // import "./DeleteModal.css";
 
 const DeleteModal = (props) => {
-  console.log("props.product", props.product);
 
   return (
     <Modal

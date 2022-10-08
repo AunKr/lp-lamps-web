@@ -57,7 +57,6 @@ const Login = () => {
                       toast.success(res?.data?.message, {
                         theme: "colored",
                       });
-                      console.log("login isLoggedIn", isLoggedIn);
                       navigate("/admin/dashboard");
                     } else {
                       toast.error(res?.error?.message, {

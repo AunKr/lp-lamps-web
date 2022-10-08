@@ -44,7 +44,6 @@ const Register = () => {
                 return errors;
               }}
               onSubmit={(values, { setSubmitting }) => {
-                console.log("values", values);
                 register(values)
                 .then(res => {
                     if(res.success){

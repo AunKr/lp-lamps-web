@@ -9,7 +9,6 @@ import "./productModal.css";
 import { updateProduct } from "../Products/product.service";
 
 const ProductModal = (props) => {
-  console.log("props.product", props.product);
   const [imageSrc, setImageSrc] = useState(
     props.product?.image ? props.product.image : null
   );
@@ -39,7 +38,6 @@ const ProductModal = (props) => {
           validateOnChange={true}
           validateOnBlur={true}
           validate={(values) => {
-            console.log("values", values);
             const errors = {};
             if (!values.name) {
               errors.name = "Please enter name of product";
@@ -56,7 +54,6 @@ const ProductModal = (props) => {
             if (!productValue && !values.file) {
               errors.file = "Please select file";
             }
-            console.log("errors",errors);
             return errors;
           }}
           onSubmit={async (values) => {
@@ -139,7 +136,7 @@ const ProductModal = (props) => {
                 >
                   <option value="">Please select Category </option>
                   <option value="bike"> E-bike</option>
-                  <option value="scooty">E-Scooty</option>
+                  <option value="scooter">E-Scooter</option>
                   <option value="rickshaw">E-Rickshaw</option>
                 </select>
                 {errors.category && touched.category ? (

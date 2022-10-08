@@ -182,7 +182,7 @@ const Dashboard = () => {
                         <tr key={index+1}>
                           <th scope="row">{index+1}</th>
                           <td>{val.name}</td>
-                          <td>{val.category === 'bike' ? 'E-Bike': val.category === 'scooty'? 'E-Scooty': 'E-Rickshaw'}</td>
+                          <td>{val.category === 'bike' ? 'E-Bike': val.category === 'scooter'? 'E-Scooter': 'E-Rickshaw'}</td>
                           <td>{val.subcategory === 'head' ? 'Head': val.subcategory === 'tail'? 'Tail': 'Indicator'}</td>
                           <td className="actionItem">
                             {" "}
