@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.522d4cfd.chunk.css",
-    "main.js": "/static/js/main.07450a87.chunk.js",
-    "main.js.map": "/static/js/main.07450a87.chunk.js.map",
+    "main.css": "/static/css/main.ad2954f5.chunk.css",
+    "main.js": "/static/js/main.6c582bc7.chunk.js",
+    "main.js.map": "/static/js/main.6c582bc7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.00d71741.js",
     "runtime-main.js.map": "/static/js/runtime-main.00d71741.js.map",
     "static/css/2.136c3260.chunk.css": "/static/css/2.136c3260.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.23a4b912.chunk.js.map": "/static/js/3.23a4b912.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.136c3260.chunk.css.map": "/static/css/2.136c3260.chunk.css.map",
-    "static/css/main.522d4cfd.chunk.css.map": "/static/css/main.522d4cfd.chunk.css.map",
+    "static/css/main.ad2954f5.chunk.css.map": "/static/css/main.ad2954f5.chunk.css.map",
     "static/js/2.6f62d928.chunk.js.LICENSE.txt": "/static/js/2.6f62d928.chunk.js.LICENSE.txt",
     "static/media/style.css": "/static/media/contact-bg.67b6dc0a.png",
     "static/media/big-blog-thumb.375c0975.jpg": "/static/media/big-blog-thumb.375c0975.jpg",
@@ -22,8 +22,10 @@
     "static/media/blogImg2.a3332da4.webp": "/static/media/blogImg2.a3332da4.webp",
     "static/media/blogger.cbfd2506.png": "/static/media/blogger.cbfd2506.png",
     "static/media/delete.e5448b06.png": "/static/media/delete.e5448b06.png",
+    "static/media/ebikeCover.fd1526ed.jpg": "/static/media/ebikeCover.fd1526ed.jpg",
     "static/media/editing.ddcd8678.png": "/static/media/editing.ddcd8678.png",
     "static/media/electric-motor.2a9b7f85.png": "/static/media/electric-motor.2a9b7f85.png",
+    "static/media/escooterCover.ea853391.png": "/static/media/escooterCover.ea853391.png",
     "static/media/login-bg.bbf6b8a3.jpg": "/static/media/login-bg.bbf6b8a3.jpg",
     "static/media/logo1.26adaf12.png": "/static/media/logo1.26adaf12.png",
     "static/media/logo2.b995ff2c.png": "/static/media/logo2.b995ff2c.png",
@@ -40,7 +42,7 @@
     "static/js/runtime-main.00d71741.js",
     "static/css/2.136c3260.chunk.css",
     "static/js/2.6f62d928.chunk.js",
-    "static/css/main.522d4cfd.chunk.css",
-    "static/js/main.07450a87.chunk.js"
+    "static/css/main.ad2954f5.chunk.css",
+    "static/js/main.6c582bc7.chunk.js"
   ]
 }
