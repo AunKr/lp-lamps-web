@@ -34,6 +34,8 @@ const ProductModal = (props) => {
             category: productValue ? productValue.category : "",
             subcategory: productValue ? productValue.subcategory : "",
             description: productValue ? productValue.description : "",
+            keyfeatures: productValue ? productValue.keyfeatures : "",
+            features: productValue ? productValue.features : "",
           }}
           validateOnChange={true}
           validateOnBlur={true}
@@ -64,6 +66,8 @@ const ProductModal = (props) => {
               formData.append("subcategory", values.subcategory);
               formData.append("description", values.description);
               formData.append("image", values.file);
+              formData.append("keyfeatures", values.keyfeatures);
+              formData.append("features", values.features);
               const res = await axios.post(
                 // "http://localhost:4700/product/create",
                 "https://luxpallamps.org/api/product/create",
@@ -159,6 +163,28 @@ const ProductModal = (props) => {
                 {errors.subcategory && touched.subcategory ? (
                   <div className="error">{errors.subcategory}</div>
                 ) : null}
+              </div>
+              <div className="form-input">
+                <label>Features*</label>
+                <textarea
+                  type="features"
+                  name="features"
+                  placeholder="Enter Features"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.features}
+                />
+              </div>
+              <div className="form-input">
+                <label>Key Features*</label>
+                <textarea
+                  type="keyfeatures"
+                  name="keyfeatures"
+                  placeholder="Enter Key Features"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.keyfeatures}
+                />
               </div>
               <div className="form-input">
                 <label>Description*</label>

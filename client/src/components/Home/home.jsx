@@ -6,7 +6,9 @@ import gifImage2 from '../../assets/slider2.gif'
 import gifImage3 from '../../assets/slider3.gif'
 import gifImage4 from '../../assets/slider4.gif'
 import gifImage5 from '../../assets/slider5.gif'
-import portfolioImage from '../../assets/images/portfolio-image.png'
+import ebikeCoverImage from '../../assets/images/ebikeCover.jpg'
+import escooterCoverImage from '../../assets/images/escooterCover1.jpg'
+import erickshawCoverImage from '../../assets/images/erickshawCover.jpg'
 import blogDec from '../../assets/images/blog-dec.png'
 import blogThumb from '../../assets/images/blog-thumb-01.jpg'
 import blogThumb2 from '../../assets/images/blogImg2.webp'
@@ -119,38 +121,38 @@ const Home = () => {
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-md-6 col-sm-12">
               <a href="#">
                 <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
                   <div class="hidden-content">
                     <h4>Electric Bike Lights</h4>
                   </div>
                   <div class="showed-content">
-                    <img src={portfolioImage} alt="" />
+                    <img src={ebikeCoverImage} alt="" />
                   </div>
                 </div>
               </a>
             </div>
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-md-6 col-sm-12">
               <a href="#">
                 <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
                   <div class="hidden-content">
                   <h4>Electric Scooter Lights</h4>
                   </div>
                   <div class="showed-content">
-                    <img src={portfolioImage} alt="" />
+                    <img src={escooterCoverImage} alt="" />
                   </div>
                 </div>
               </a>
             </div>
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-md-6 col-sm-12">
               <a href="#">
                 <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
                   <div class="hidden-content">                    
                   <h4>Electric Rickshaw Lights</h4>
                   </div>
                   <div class="showed-content">
-                    <img src={portfolioImage} alt="" />
+                    <img src={erickshawCoverImage} alt="" />
                   </div>
                 </div>
               </a>
@@ -222,7 +224,7 @@ const Home = () => {
           <div class="row">
             <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.25s">
               <div class="section-heading">
-                <h2>Feel Free To Send Us a Message About Your Website Needs</h2>
+                <h2>If you require any further information regarding products, please feel free to contact us</h2>
                 <div class="phone-info">
                   <h4>For any enquiry, Call Us: +91 9929900797</h4>
                 </div>

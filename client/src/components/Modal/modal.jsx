@@ -21,6 +21,8 @@ const ConfirmationModal = (props) => {
               <li><strong>Name</strong>: {props?.product?.name}</li>
               <li><strong>Category</strong>:{props?.product?.category}</li>
               <li><strong>SubCategory</strong>: {props?.product?.subcategory}</li>
+              <li><strong>Features</strong>: {props?.product?.features}</li>
+              <li><strong>Key Features</strong>: {props?.product?.keyfeatures}</li>
             </ul>
             <div class="portfolio-description">
               {/* <h2>This is an example of portfolio detail</h2> */}

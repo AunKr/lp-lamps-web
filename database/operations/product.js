@@ -12,7 +12,9 @@ class Products extends ModelBase {
       description: "description",
       imageName: "imageName",
       driveId: "driveId",
-      type: 'type'
+      type: 'type',
+      keyfeatures: 'keyfeatures',
+      features: 'features'
     };
 
     // Set name of Model

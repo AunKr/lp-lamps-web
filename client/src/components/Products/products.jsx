@@ -125,7 +125,7 @@ const Products = () => {
                       className="col-lg-3 col-md-6 portfolio-item"
                       key={val?.id}
                     >
-                       <div className="portfolio-itemDiv">
+                      <div className="portfolio-itemDiv">
                       <p>Loading...</p>
                       <img src={`${driveUrl}${val?.driveId}`} alt="reporting" />
                       <div className="portfolio-info">
@@ -153,15 +153,18 @@ const Products = () => {
                       className="col-lg-3 col-md-6 portfolio-item"
                       key={val?.id}
                     >
-                      <img src={`${driveUrl}${val?.driveId}`} alt="reporting" />
-                      <div className="portfolio-info">
-                        <h4>{val.name}</h4>
-                        <span>{val.description}</span>
-                        <div
-                          className="add-icon"
-                          onClick={() => openModal(val)}
-                        >
-                          <Button>View</Button>
+                      <div className="portfolio-itemDiv"> 
+                        <p>Loading...</p>
+                        <img src={`${driveUrl}${val?.driveId}`} alt="reporting" />
+                        <div className="portfolio-info">
+                          <h4>{val.name}</h4>
+                          <span>{val.description}</span>
+                          <div
+                            className="add-icon"
+                            onClick={() => openModal(val)}
+                          >
+                            <Button>View</Button>
+                          </div>
                         </div>
                       </div>
                     </div>

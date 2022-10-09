@@ -2,14 +2,15 @@ import React, { useContext, useState } from 'react'
 import './header.css'
 import LogoImage1 from '../../assets/images/logo1.png'
 import LogoImage2 from '../../assets/images/logo2.png'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../AuthContextProvider/authContextProvider'
 
-const Header = () => {
+const Header = (props) => {
     const [sideBar, setSideBar] = useState(false)
-    const { activeBar, setActiveBar } = useContext(AuthContext);
+    const location = useLocation()
     const navigate = useNavigate()
-
+    const [activeBar, setActiveBar] = useState(location.pathname === '/products' ? '#portfolio': location.hash ? location.hash : '#top')
+   
     const openSideBar = () => {
         setSideBar(true)
     }
@@ -17,12 +18,11 @@ const Header = () => {
         setSideBar(false)
     }
     const handleHeading = (value) => {
-        setActiveBar(value)
         localStorage.setItem(
             "activeBar",
             JSON.stringify(value)
         );
-        if(value === 'portfolio'){
+        if(value === '#portfolio'){
             navigate('/products')
         }
     }
@@ -39,11 +39,11 @@ const Header = () => {
                             </a>
                             <ul className={`nav ${sideBar ? 'openSideBar' : ''}`} >
                                 <li className="mobileShow"><a onClick={closeSideBar}>X</a></li>
-                                <li className="scroll-to-section"><a href="/#top" className={activeBar === 'home' ? "active" : ''} onClick={() => handleHeading('home')}>Home</a></li>
-                                <li className="scroll-to-section"><a href="/#about" className={activeBar === 'about' ? "active" : ''} onClick={() => handleHeading('about')}>About Us</a></li>
-                                <li className="scroll-to-section hoverNav"><a href="" className={activeBar === 'portfolio' ? "active" : ''} onClick={() => handleHeading('portfolio')}>Products</a></li>
-                                <li className="scroll-to-section"><a href="/#blog" className={activeBar === 'blog' ? "active" : ''} onClick={() => handleHeading('blog')}>Blog</a></li>
-                                <li className="scroll-to-section"><div className="main-red-button"><a href="/#contact" className={activeBar === 'contact' ? "active" : ''} onClick={() => handleHeading('contact')}>Contact Us</a></div></li>
+                                <li className="scroll-to-section"><a href="/#top" className={activeBar === '#top' ? "active" : ''} onClick={() => handleHeading('#top')}>Home</a></li>
+                                <li className="scroll-to-section"><a href="/#about" className={activeBar === '#about' ? "active" : ''} onClick={() => handleHeading('#about')}>About Us</a></li>
+                                <li className="scroll-to-section hoverNav"><a href="" className={activeBar === '#portfolio' ? "active" : ''} onClick={() => handleHeading('#portfolio')}>Products</a></li>
+                                <li className="scroll-to-section"><a href="/#blog" className={activeBar === '#blog' ? "active" : ''} onClick={() => handleHeading('#blog')}>Blog</a></li>
+                                <li className="scroll-to-section"><div className="main-red-button"><a href="/#contact" className={activeBar === '#contact' ? "active" : ''} onClick={() => handleHeading('#contact')}>Contact Us</a></div></li>
                             </ul>
                             <a className="menu-trigger" onClick={openSideBar}>
                                 <span>Menu</span>

@@ -26,8 +26,13 @@ module.exports = (sequelize, DataTypes) => {
         },
         type: {
             type: DataTypes.STRING
+        },
+        keyfeatures : {
+            type: DataTypes.STRING
+        },
+        features : {
+            type: DataTypes.STRING
         }
-    
     })
     return Product
 }

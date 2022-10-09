@@ -50,6 +50,8 @@ console.log('productCreate :');
       driveId: uploadedFile.id,
       imageName: uploadedFile.name,
       type: uploadedFile.mimeType,
+      keyfeatures: req.body.keyfeatures,
+      features: req.body.features
     };
     console.log('data :', data);
     const response = await Product.create(data);

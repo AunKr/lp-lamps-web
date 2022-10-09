@@ -5,10 +5,8 @@ export const AuthContext = createContext({isLoggedIn: localStorage.getItem('user
 const AuthContextProvider = (props) => {
   const [isLoggedIn, setLoggedIn] =useState(localStorage.getItem('userData') ? true : false)
   const [session, setSession] =useState(localStorage.getItem('userData') ? JSON.parse(localStorage.getItem('userData')).token : null)
-  const [activeBar, setActiveBar] = useState(localStorage.getItem('activeBar') ? JSON.parse(localStorage.getItem('activeBar')) : 'home')
-
    return (
-    <AuthContext.Provider value={{ isLoggedIn, setLoggedIn, session, setSession, activeBar, setActiveBar }}>
+    <AuthContext.Provider value={{ isLoggedIn, setLoggedIn, session, setSession }}>
       {props.children}
     </AuthContext.Provider>
   )
