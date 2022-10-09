@@ -32,11 +32,9 @@ if (cluster.isMaster) {
   app.set("port", port);
   app.use(bodyParser.json({ limit: "900mb" }));
   app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
-  app.use(express.static(path.join(__dirname, "public")));
   app.use(cors());
 
   // load all routes
-  // app.use('/images', express.static(path.join(__dirname + '/images')))
   app.use("/auth", userRoute);
   app.use("/product", productRoutes);
 
@@ -49,11 +47,6 @@ if (cluster.isMaster) {
   process.on("unhandledRejection", (error) => {
     console.log("UNHANDLED_REJECTION", error);
   });
-
-  // app.use(express.static('client/build'));
-  // app.get('/*', (req, res) => {
-  // res.sendFile(path.join(__dirname + '/client/build/index.html'));
-  // });
 
   // Start the Server
   server.listen(port, function () {
