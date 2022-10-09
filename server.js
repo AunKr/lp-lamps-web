@@ -27,7 +27,7 @@ if (cluster.isMaster) {
   // In this case it is an HTTP server
 
   // set up constants
-  let port = process.env.PORT || 4500;
+  let port = process.env.PORT || 4700;
 
   app.set("port", port);
   app.use(bodyParser.json({ limit: "900mb" }));
