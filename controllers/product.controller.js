@@ -24,7 +24,7 @@ exports.upload = multer({
 exports.productCreate = async (req, res) => {
 console.log('productCreate :');
   try {
-    const filePath = req.file?.path.replace(/\\/g, " ");
+    const filePath = req.file.path.replace(/\\/g, " ");
     console.log('filePath :', filePath);
     const filepathArray = filePath.split(" ");
     console.log('filepathArray :', filepathArray);

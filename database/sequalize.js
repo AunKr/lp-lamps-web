@@ -35,8 +35,8 @@ fs.readdirSync(path.join(modelPath, "models")).forEach(function (file) {
 });
 
 Object.keys(db).forEach(function (modelName) {
-  if (db[modelName]?.options?.hasOwnProperty("associate")) {
-    db[modelName]?.options?.associate(db);
+  if (db[modelName].options.hasOwnProperty("associate")) {
+    db[modelName].options.associate(db);
   }
 });
 
