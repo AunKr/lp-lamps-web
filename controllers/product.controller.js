@@ -9,7 +9,7 @@ const PATH_TO_CREDENTIALS = path.resolve(`${__dirname}/my_credentials.json`);
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, path.join(__dirname, "../images"));
+    cb(null, path.join(process.cwd(), "images"));
   },
   filename: (req, file, cb) => {
     cb(null, file.originalname);
@@ -26,10 +26,10 @@ console.log('productCreate :');
   try {
     const filePath = req.file.path.replace(/\\/g, " ");
     console.log('filePath :', filePath);
-    const filepathArray = filePath.split(" ");
+    const filepathArray = filePath.split("/");
     console.log('filepathArray :', filepathArray);
     const imagePath = `${filepathArray[filepathArray.length - 1]}`;
-    console.log('imagePath :',  path.join(__dirname, `../images/${imagePath}`));
+    console.log('imagePath :',  path.join(process.cwd(), `images/${imagePath}`));
     const creds_service_user = require(PATH_TO_CREDENTIALS);
     const googleDriveInstance = new NodeGoogleDrive({
       ROOT_FOLDER: YOUR_ROOT_FOLDER,
@@ -37,7 +37,7 @@ console.log('productCreate :');
     await googleDriveInstance.useServiceAccountAuth(creds_service_user);
     
     let uploadedFile = await googleDriveInstance.writeFile(
-      path.join(__dirname, `../images/${imagePath}`),
+      path.join(process.cwd(), `images/${imagePath}`),
       YOUR_ROOT_FOLDER
       );
       
