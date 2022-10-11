@@ -102,7 +102,7 @@ const Products = () => {
                     <img src={`${driveUrl}${val?.driveId}`} alt="reporting" />
                       <div className="portfolio-info">
                         <h4>{val.name}</h4>
-                        <span>{val.description}</span>
+                        <p className="subDescription">{val.description}</p>
                         <div
                           className="add-icon"
                           onClick={() => openModal(val)}
@@ -130,7 +130,7 @@ const Products = () => {
                       <img src={`${driveUrl}${val?.driveId}`} alt="reporting" />
                       <div className="portfolio-info">
                         <h4>{val.name}</h4>
-                        <span>{val.description}</span>
+                        <p className="subDescription">{val.description}</p>
                         <div
                           className="add-icon"
                           onClick={() => openModal(val)}
@@ -158,7 +158,7 @@ const Products = () => {
                         <img src={`${driveUrl}${val?.driveId}`} alt="reporting" />
                         <div className="portfolio-info">
                           <h4>{val.name}</h4>
-                          <span>{val.description}</span>
+                          <p className="subDescription">{val.description}</p>
                           <div
                             className="add-icon"
                             onClick={() => openModal(val)}
