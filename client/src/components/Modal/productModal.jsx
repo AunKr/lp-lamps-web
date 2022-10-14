@@ -13,7 +13,7 @@ const ProductModal = (props) => {
     props.product?.image ? props.product.image : null
   );
   const [productValue, setProductValue] = useState(
-    props?.product?.image ? props.product : null
+    props?.product ? props.product : null
   );
   const session = JSON.parse(localStorage.getItem("userData"));
 

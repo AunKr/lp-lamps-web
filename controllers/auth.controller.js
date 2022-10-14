@@ -9,6 +9,10 @@ sgMail.setApiKey('SG.w-jYkFmaT5iJGIzSw3Cpmw.-rKtETUk4qIdaIxCAuawTSxXd7G9ZB9G2OmX
 exports.register = async (req, res) => {
   try {
     const { name, email, password, phone } = req.body;
+    const allUsers = await User.getAll();
+    if (allUsers.count > 2) {
+      return service.responseError(res, service.createError(service.ERROR.ERROR_BAD_REQUEST, 'You are not allowed to register'));
+    }
     const isDuplicateUser = await User.getFirst({ email: email });
     //This will check that user is Registered User or not
     if (isDuplicateUser) {
