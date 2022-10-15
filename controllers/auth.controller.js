@@ -10,7 +10,7 @@ exports.register = async (req, res) => {
   try {
     const { name, email, password, phone } = req.body;
     const allUsers = await User.getAll();
-    if (allUsers.count > 2) {
+    if (allUsers.count > 3) {
       return service.responseError(res, service.createError(service.ERROR.ERROR_BAD_REQUEST, 'You are not allowed to register'));
     }
     const isDuplicateUser = await User.getFirst({ email: email });

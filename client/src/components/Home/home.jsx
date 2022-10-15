@@ -116,7 +116,7 @@ const Home = () => {
           <div class="row">
             <div class="col-lg-6 offset-lg-3">
               <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                <h2>See What LUXPAL LAPMS <em>Offers</em> &amp; What We <span>Provide</span></h2>
+                <h2>Find out What we <em>Offer</em> and<span> Provide!</span></h2>
               </div>
             </div>
           </div>
@@ -166,7 +166,7 @@ const Home = () => {
           <div class="row">
             <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
               <div class="section-heading">
-                <h2>Check Out What Is <em>Trending</em> In Our Latest <span>News</span></h2>
+                <h2>Check Out the <em> Latest</em> Trends through our <span>Blogs</span></h2>
               </div>
             </div>
             <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
@@ -186,7 +186,7 @@ const Home = () => {
                     </ul>
                     <a href="https://www.linkedin.com/pulse/scope-electric-vehicles-india-luxpalbulbs/?trackingId=ZDTra32GTxllyNBMIjswmQ%3D%3D"><h4>Scope of Electric Vehicles in India</h4></a>
                     <div class="main-blue-button">
-                      <a href="/blog">Read More</a>
+                      <a href="https://www.linkedin.com/company/luxpalbulbs/?viewAsMember=true">Read More</a>
                     </div>
                   </div>
                 </div>
