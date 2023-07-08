@@ -13,8 +13,9 @@ const ProductModal = (props) => {
     props.product?.image ? props.product.image : null
   );
   const [productValue, setProductValue] = useState(
-    props?.product ? props.product : null
+    Object.keys(props?.product).length > 0 ? props.product : null
   );
+  console.log(" props?.product :", props?.product);
   const session = JSON.parse(localStorage.getItem("userData"));
 
   return (
